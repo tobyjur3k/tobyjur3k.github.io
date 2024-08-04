@@ -6,6 +6,12 @@
     <style>
         body { background: black;
              font-size: 4rem; }
+
+        input {
+            color: lightgrey;
+            background: transparent;
+            border: 3px solid limegreen;
+        }
    </style>
 </head>
 <body>
@@ -15,12 +21,16 @@
         <p>login: </p>
         <input id="inputLogin">
         <p>haslo: </p>
-        <input id="inputHaslo">
-    </div>    
+        <input id="inputHaslo" 
+input="if (this.value === 'eo') {
+    document.getElementById('divAuth').hidden = true;
+}">
+        </div>    
     </div>
     
 </body>
 <script>
-    
+    const divAuth = document.getElementById('divAuth');
+
 </script>
 </html>

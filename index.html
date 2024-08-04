@@ -19,19 +19,34 @@
         button:hover {
             background-color: #45a049; /* Kolor tła przy najechaniu kursorem */
         }
+        p {
+            color: limegreen;
+        }
     </style>
 </head>
 <body>
+    <p id="czas"></p>
     <button>
         W CHUJ DUZY
     </button>
     <button onclick="
-        window.location.href = 'https://www.youtube.com'">
+        window.location.href = 'https://www.youtube.com';">
         RICK ASTLEY
     </button>
     <script>
+           function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const currentTime = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('czas').textContent = currentTime;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();  // Call immediately to show the time right away
         document.addEventListener('DOMContentLoaded', function() {
-            let znasznik = document.getElementById('p1');
+            let znasznik = ;
             let gownoTxt = 'eoeoeo';
 
             znasznik.textContent = gownoTxt;

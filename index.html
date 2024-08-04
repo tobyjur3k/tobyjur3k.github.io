@@ -8,32 +8,49 @@
             color: limegreen;
             font-weight: bold;
         }
-        body { background: black; 
+        body { background: black;
              font-size: 4rem; }
         button {
             font-family: 'Comic Sans MS', 'Comic Sans', cursive; }
+
+        .moving-element {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: move 2s infinite alternate;
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 200px;
+            }
+        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>MATI DO WYNAJĘCIA</h1>
-    <div style="display: grid;">
-        <button onclick="let d = document.getElementById('divCennik');
-            let kom = document.createElement('p');
-            kom.textContent = 'SZYSTKO GIT';
-            if (!d) { kom.textContent = 'ZESRAŁĘ SIĘ'; 
-                document.body.appendChild(kom); }
-            if (d.hidden) { d.hidden = false; } else { d.hidden = true; }
-            ">
-            CENNIK
-        </button>
-        <div id="divCennik" hidden style="
-            display: flex; justify-content: center; ">
-                <p style="flex: 1; border-right: 3px solid limegreen;">W PASZCZU</p>
-                <p style="flex: 1; border-left: 3px solid limegreen;">50 ZŁ</p>
-        </div>
+    <div id="moving-element">
     </div>
-    <button class="btn-danger">EO</button>
+    <h1>CZESŁAW</h1>
+
+<button class="btn-danger">EO</button>
+    <script>
+        const jazda = document.getElementById('pJazda');
+
+        const jazdy = [
+            'Yyyyyyy...',
+            'Wyświetlono',
+            ''
+        ]
+
+        const elem = []
+
+
+    </script>
 </body>
 </html>

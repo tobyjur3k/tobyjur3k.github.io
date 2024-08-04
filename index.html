@@ -28,10 +28,27 @@ input="if (this.value === 'eo') {
 }">
         </div>    
     </div>
-    
+    <div id="info" style="
+        display: grid;">
+    </div>
 </body>
 <script>
     const divAuth = document.getElementById('divAuth');
+    const zmiany = [
+        'qtaz', 'maly', 'lata'
+    ]
 
+    for (let i of zmiany) {
+        let pItem = document.createElement('p');
+
+        pItem.id = 'p' + i;
+        pItem.textContent = i;
+        pItem.style.color = 'black';
+        pItem.style.fontWeight = 'bold';
+        pItem.style.background = 'white';
+        document.getElementById('info').appendChild(p);
+        
+    }
 </script>
 </html>
+    

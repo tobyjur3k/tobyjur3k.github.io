@@ -5,11 +5,29 @@
     <title>SE SIEDZIMY CNIE</title>
     <style>
         body { background: black; }
-        h1 { color: lime; }
-        h2 { color: white; }
     </style>
 </head>
 <body>
     <p>elo</p>
+    <p id="p1">
+        
+    </p>
+    <button onclick="
+        window.location.href = 'youtube.com';
+        ">
+        RICK ASTLEY
+    </button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let znasznik = document.getElementById('p1');
+            let gownoTxt = 'eoeoeo';
+
+            znasznik.textContent = gownoTxt;
+            console.log(gownoTxt);
+
+            
+        })
+        
+    </script>
 </body>
 </html>

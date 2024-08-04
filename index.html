@@ -4,57 +4,37 @@
     <meta charset="UTF-8">
     <title>SE SIEDZIMY CNIE</title>
     <style>
+        h1 {
+            color: limegreen;
+            font-weight: bold;
+        }
         body { background: black; 
              font-size: 4rem; }
         button {
-            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-            font-size: 16px; /* Przykładowy rozmiar czcionki */
-            padding: 10px 20px; /* Przykładowe wymiary przycisku */
-            background-color: #4CAF50; /* Przykładowy kolor tła */
-            color: white; /* Przykładowy kolor tekstu */
-            border: none; /* Brak obramowania */
-            border-radius: 5px; /* Zaokrąglone rogi */
-            cursor: pointer; /* Kursor w formie wskaźnika */
-        }
-
-        button:hover {
-            background-color: #45a049; /* Kolor tła przy najechaniu kursorem */
-        }
-        p {
-            color: limegreen;
-        }
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive; }
     </style>
 </head>
 <body>
-    <p id="czas"></p>
-    <button>
-        W CHUJ DUZY
-    </button>
-    <button onclick="
-        window.location.href = 'https://www.youtube.com';">
-        RICK ASTLEY
-    </button>
+    <h1>MATI DO WYNAJĘCIA</h1>
+    <div style="display: grid;">
+        <button onclick="let d = document.getElementById('divCennik');
+            let kom = document.createElement('p');
+            kom.textContent = 'SZYSTKO GIT';
+            if (!d) { kom.textContent = 'ZESRAŁĘ SIĘ'; 
+                document.body.appendChild(kom); }
+            if (d.hidden) { d.hidden = false; } else { d.hidden = true; }
+            ">
+            CENNIK
+        </button>
+        <div id="divCennik" hidden style="
+            display: flex; justify-content: center; ">
+                <p style="flex: 1; border-right: 3px solid limegreen;">W PASZCZU</p>
+                <p style="flex: 1; border-left: 3px solid limegreen;">50 ZŁ</p>
+        </div>
+    </div>
+    
+    
     <script>
-           function updateTime() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            const currentTime = `${hours}:${minutes}:${seconds}`;
-            document.getElementById('czas').textContent = currentTime;
-        }
-
-        setInterval(updateTime, 1000);
-        updateTime();  // Call immediately to show the time right away
-        document.addEventListener('DOMContentLoaded', function() {
-            let znasznik = ;
-            let gownoTxt = 'eoeoeo';
-
-            znasznik.textContent = gownoTxt;
-            console.log(gownoTxt);
-
-            
-        })
         
     </script>
 </body>

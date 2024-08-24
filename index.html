@@ -9,10 +9,35 @@
    </style>
 </head>
 <body>
-<h1 style="color: red;">ELO JESTEM I <3</h1>
+<div style="display: flex;" id="menu">
+    <button>info</button>
+    <button>cv</button>
+</div>
+<div hidden id="cv">
+</div>
+<div hidden id="info" style="display: grid">
+    <span>dane kontaktowe</span>
+    <span>o mnie</span>
+    <span>Umiejętności</span>
+    <span>Zainteresowania i hobby</span>
+    <span>Doświadczenie zawodowe</span>
+    <span>Wyksztalcenie</span>
+    <span>stopka</span>
+</div>
 </body>
 <script>
-
+    function poka(param) {
+        let divCv = document.getElementById('cv'); 
+        let divInfo = document.getElementById('info');
+        if (param === 'cv') {
+            divCv.hidden = false;
+            divInfo.hidden = true;
+        }
+        else if (param === 'info') {
+            divCv.hidden = true;
+            divInfo.hidden = false;
+        }
+    }        
 </script>
 </html>
     

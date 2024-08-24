@@ -6,48 +6,13 @@
     <style>
         body { background: black;
              font-size: 4rem; }
-        
-        input {
-            color: lightgrey;
-            background: transparent;
-            border: 3px solid limegreen;
-        }
-        .colorLime { color: limegreen; }
    </style>
 </head>
 <body>
-    <div id="layout">
-        <div id="divAuth"
-        style="display: grid;">
-        <p>LOGIN</p>
-        <input id="inputLogin">
-        <p>HASLO</p>
-        <input id="inputHaslo">
-        </div>    
-    </div>
-    <div id="info" style="
-        display: grid;">
-    </div>
+<h1 style="color: red;">ELO JESTEM I <3</h1>
 </body>
 <script>
-    const zmiany = [ 'qtaz', 'maly', 'lata' ];
-    const divAuth = document.getElementById('divAuth');
-    
-    for (let i of zmiany) {
-        let pItem = document.createElement('p');
 
-        pItem.id = 'p' + i;
-        pItem.textContent = i;
-        pItem.style.color = 'black';
-        pItem.style.fontWeight = 'bold';
-        pItem.style.background = 'white';
-        document.getElementById('info').appendChild(pItem);    
-    }
-
-    for (let pItem of divAuth.querySelectorAll('p')) {
-        pItem.style.color = 'limegreen';
-    }
-    
 </script>
 </html>
     

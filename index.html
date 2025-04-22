@@ -1,16 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>SE SIEDZIMY CNIE</title>
-    <style>
-        body { background: black;
-             font-size: 40rem; }
-   </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oficjalna strona bio [Twoje Imię i Nazwisko]. Dowiedz się więcej o mojej karierze, projektach i kontaktach." />
+  <meta name="author" content="[Twoje Imię i Nazwisko]" />
+  <title>Be My Guest By Adrian</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/oferta.css">
+  <style>
+    body {
+      margin-left: 130px;
+      margin-right: 130px;
+      border: 1px solid black;
+      font-family: "Georgia", serif;
+        font-size: 18px;
+    }
+        .b {
+      border: none;
+      background: transparent;
+      font-size: 2rem;
+    }
+
+    .b:hover {
+      color: white;
+      border: 1px solid black;
+    }
+
+    .socials {
+      margin-top: 4rem;
+      display: flex;
+      gap: 15rem;
+      justify-content: center;
+    }
+
+    .socials a {
+      color: #d4af37;
+      margin-right: 15px;
+      font-size: 124px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #fff;
+      border: 1px solid black;
+    }
+
+    .bPanel {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      height: 100%;
+    }
+
+    .bPanel:hover {
+      background: white;
+    }
+
+    .photoPanel2 {
+      margin-bottom: 10px; border: 1px solid black; background: transparent; display: flex; gap: 2rem; padding: 2rem; border-radius: 1rem; align-items: end;
+    }
+    .photoPanel2:hover {
+      background: white;
+    }
+    .bPanel2 {
+      background: transparent;
+      border: 1px solid black;
+      border-radius: 2rem;
+      height: 50px;
+      width: 50px;
+    }
+    .bPanel2:hover {
+      background: black;
+    }
+    .slider {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border: 2px solid black;
+      transition: background-image 1s ease;
+      display: flex;
+      width: 1600px;
+      height: 900px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Przyciski */
+    .nav-btn {
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 2;
+    }
+  </style>
+  <script src="/static/globalJS.js"></script>
 </head>
 <body>
-HAALO
-</body>
+  <div style="display: flex; border: 1px solid black; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+    <img src="/static/assets/logo_napis_bez_tla.png" style="width: 180px; height: 150px; border: 1px solid black;" onclick="sekcja('sekcja1');">
+    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; background: transparent; width: 100%; ">
+      <div><span style="font-size: 2rem;">Be My Guest by Adrian</span></div>
+      <div style="display: flex; gap: 2rem; justify-content: center; align-items: center; align-content: center; background: transparent; height: 100%;">
+        <button class="b" onclick="sekcja('sekcja2');">Cities</button>
+        <button class="b" onclick="sekcja('sekcja3');">Corporate events & Private groups</button>
+        <button class="b" onclick="sekcja('sekcja4');">About ME</button>
+        <button class="b" onclick="sekcja('sekcja5');">OPINIE</button>
+        <button class="b" onclick="sekcja('footer');">FIND ME</button>
+      </div>
+    </div>
+  </div>
+  <div id="sekcja1" style="margin-top: 30px;">
+    <div style="display: flex; flex-direction: column;">
+      <div id="panelZdjec"
+           style="display: none; width: 1600px; height: 900px; background-position: center; background-size: cover; justify-content: space-between; align-items: end;">
+          <button class="bPanel" onclick="previousPhoto();">
+            <
+          </button>
+          <div id="panelZdjecPrzyciski2" class="photoPanel2">
+          </div>
+          <button class="bPanel" onclick="nextPhoto();">
+            >
+          </button>
+      </div>
+      <div class="slider" id="slider">
+        <div style="border: 1px solid black;"><button class="bPanel2" onclick="prevSlide()"><</button></div>
+          <div id="panelZdjecPrzyciski" class="photoPanel2"></div>
+        <div style="border: 1px solid black;"><button class="bPanel2" onclick="nextSlide()">></button></div>
+      </div>
+    </div>
+    <span style="font-size: 2rem;">
+      Join BeMyGuest Company – Your Authentic Food Experience in Poland.
+  I'm Adrian, your local guide in Warsaw, and together with my amazing team in Cracow, we’re here to share our deep love for Polish cuisine, culture, and warm hospitality.
+  This isn’t just a tour – it’s a journey into the heart of Poland, through food, stories, and connection. We can’t wait to meet you – just Be My Guest.
+    </span>
 
+  </div>
+  <div id="sekcja2" style="display: flex;">
+    <div>
+      <a href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1">
+      Warsaw Traditional Food Tour with Adrian</a>
+    </div>
+    <div>
+      <img src="/static/assets/photo3.jpeg" style="width: 1600; height: 900px; ">
+    </div>
+    <div><a href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
+      Krakow: Eat Like a Local - Polish Food Tour
+    </a></div>
+    <div>
+      <img src="/static/assets/photo4.jpeg" style="width: 1600; height: 900px; border: 2px solid black;">
+    </div>
+  </div>
+  <div id="sekcja3" style="display: flex; flex-direction: column; height: 900px;">
+    <span style="font-size: 3rem;">Corporate events & private groups</span>
+  </div>
+  <div id="sekcja4" style="display: flex; justify-content: space-between; margin-top: 70px;">
+    <span style="font-size: 2rem;">About ME</span>
+    <img src="/static/assets/photo2.jpeg" style="width: 1600; height: 900px; border: 2px solid black;">
+  </div>
+  <div id="sekcja5" style="height: 950px; background: green;">
+    <span>OPINIE</span>
+    <div class="slider" id="slider2" style="width: 800px; height: 400px;">
+        <div style="border: 1px solid black;"><button class="bPanel2" onclick="prevSlide()"><</button></div>
+          <div id="panelZdjecPrzyciski3" class="photoPanel2"></div>
+        <div style="border: 1px solid black;"><button class="bPanel2" onclick="nextSlide()">></button></div>
+      </div>
+    <div class="slider" id="slider3" style="width: 800px; height: 400px; display: flex; ">
+        <div style="border: 1px solid black;"><button class="bPanel2" onclick="prevSlide()"><</button></div>
+          <div id="panelZdjecPrzyciski4" class="photoPanel2"></div>
+        <div style="border: 1px solid black;"><button class="bPanel2" onclick="nextSlide()">></button></div>
+      </div>
+  </div>
+  <div id="footer" style="display: flex; flex-direction: column; justify-content: center; text-align: center; font-size: 2rem;">
+    <div style="display: flex; width: 100%; justify-content: center; gap: 10rem;">
+      <img src="/static/assets/logo_napis_bez_tla.png" style="width: 300px; height: 300px;">
+      <img src="/static/assets/tripadvisor_logo2.png" style="width: 300px; height: 300px;">
+    </div>
+    <span>
+      Corporate Events & Private Food Tours <br>
+      Want to turn your business trip or group travel into something truly unforgettable? Just contact me – I’ll take care of everything to make your group’s experience truly special!
+    </span>
+    <a href="book@bmgpoland.com">book</a>
+    <span style="margin-top: 50px;">FIND ME</span>
+    <div class="socials">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <span>Privacy policy</span>
+    <p>&copy; 2025 Adrian Ćwikliński. Wszelkie prawa zastrzeżone.</p>
+    <a href="">Dlaczego to może się udać? (STĄD OTWORZY SIĘ PDF)</a>
+  </div>
+
+  <div hidden="">
+    <header>
+    <h1>[Twoje Imię i Nazwisko]</h1>
+    <p>[Krótki opis: np. Programista, Artysta, Twórca]</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">O mnie</a></li>
+      <li><a href="#projects">Projekty</a></li>
+      <li><a href="#skills">Umiejętności</a></li>
+      <li><a href="#experience">Doświadczenie</a></li>
+      <li><a href="#education">Edukacja</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>O mnie</h2>
+      <p>Krótka historia, czym się zajmujesz, co Cię wyróżnia.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projekty</h2>
+      <ul>
+        <li><strong>Nazwa Projektu</strong> – Opis projektu, technologie, link</li>
+        <!-- Dodaj więcej -->
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Umiejętności</h2>
+      <ul>
+        <li>HTML / CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <!-- Dodaj więcej -->
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Doświadczenie</h2>
+      <article>
+        <h3>Nazwa firmy / projektu</h3>
+        <p>Stanowisko, zakres obowiązków, lata pracy</p>
+      </article>
+      <!-- Dodaj więcej -->
+    </section>
+
+    <section id="education">
+      <h2>Edukacja</h2>
+      <p>Nazwa uczelni / szkoły, kierunek, lata</p>
+    </section>
+
+    <section id="contact">
+      <h2>Kontakt</h2>
+      <p>Email: <a href="mailto:twojemail@example.com">twojemail@example.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/twojprofil" target="_blank">Twój profil</a></p>
+      <!-- Dodaj inne linki: GitHub, Instagram, itd. -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 [Twoje Imię i Nazwisko]. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+  </div>
+
+</body>
 </html>
-    

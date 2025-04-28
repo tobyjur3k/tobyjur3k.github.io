@@ -1,5 +1,5 @@
 function getS1PanelPhotos() {
-    let p = ['Photo1.jpeg', 'inne2.jpg', 'aboutme2.jpeg', 'new4.jpeg', 'inne1.jpeg', ]; let result = [];
+    let p = ['photo1.jpeg', 'inne2.jpg', 'aboutme2.jpeg', 'new4.jpeg', 'inne1.jpeg', ]; let result = [];
     p.forEach((e, index) => { result.push('/static/assets/' + p[index]); });
     return result;
 }
@@ -66,7 +66,7 @@ special. I’m waiting for you – Just BeMyGuest!`
                     ${spanTxt}
                 </span>
             </div>
-            <img src="/static/assets/Photo2.jpeg" style="height: 100%;"></img>
+            <img src="/static/assets/photo2.jpeg" style="height: 100%;"></img>
         </div>`;
 }
 function sectionFooter() {

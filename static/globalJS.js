@@ -66,7 +66,7 @@ special. I’m waiting for you – Just BeMyGuest!`
                     ${spanTxt}
                 </span>
             </div>
-            <img src="/static/assets/photo2.jpeg" style="height: 100%;"></img>
+            <img src="/static/assets/Photo2.jpeg" style="height: 100%;"></img>
         </div>`;
 }
 function sectionFooter() {

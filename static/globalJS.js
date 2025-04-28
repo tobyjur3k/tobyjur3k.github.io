@@ -1,5 +1,5 @@
 function getS1PanelPhotos() {
-    let p = ['photo1.jpeg', 'inne2.jpg', 'aboutme2.jpeg', 'new4.jpeg', 'inne1.jpeg', ]; let result = [];
+    let p = ['photo1.jpeg', 'inne2.jpg', 'aboutme2.jpeg', 'new4.jpeg', 'inne1.jpeg']; let result = [];
     p.forEach((e, index) => { result.push('/static/assets/' + p[index]); });
     return result;
 }

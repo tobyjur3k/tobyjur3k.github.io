@@ -1,8 +1,12 @@
+
+
 function getS1PanelPhotos() {
-    let p = ['photo1.jpeg', 'inne2.jpg', 'aboutme2.jpeg', 'new4.jpeg', 'inne1.jpeg']; let result = [];
+    let p = ['Photo1.jpeg', 'inne2.jpg', 'aboutme2.jpeg', 'new4.jpeg', 'inne1.jpeg', ]; let result = [];
     p.forEach((e, index) => { result.push('/static/assets/' + p[index]); });
     return result;
 }
+const p1Photos = getS1PanelPhotos();
+let p1Index = 0;
 function getScrollbarWidth() {
   const scrollDiv = document.createElement('div');
   scrollDiv.style.visibility = 'hidden';
@@ -26,11 +30,54 @@ function returnClientView() {
     const i = [window.innerWidth, window.innerHeight];
     return i;
 }
+function s1TextHTML() {
+    return `
+        <div style="padding: 2rem; ">
+            <span style="font-size: 1.5rem;">Join BeMyGuest Company – Your Authentic Food Experience in Poland.
+            I'm Adrian, your local guide in Warsaw, and together with my amazing team in Cracow,
+            we’re here to share our deep love for Polish cuisine, culture, and warm hospitality.
+            This isn’t just a tour – it’s a journey into the heart of Poland, through food, stories,
+            and connection. We can’t wait to meet you – just <b>Be My Guest</b>.
+            </span>
+        </div>
+    `
+}
+function fillS1() {
+    let s1Fill = document.createElement('div'); s1Fill.id = 's1Fill';
+    s1Fill.className = 'section-fill section-fill-s1';
+    let ppParent = document.createElement('div');
+    ppParent.style.width = '90%';
+    ppParent.style.height = '90%';
+    ppParent.style.border = '1px solid black';
+    ppParent.style.marginTop = '2rem';
+    ppParent.appendChild(createPhotoPanel('pp1', getS1PanelPhotos()));
+
+    s1Fill.appendChild(ppParent);
+    s1Fill.innerHTML += s1TextHTML();
+
+
+
+    s1 = document.getElementById('s1'); s1.appendChild(s1Fill);
+}
 function fillS2() {
     let s2 = document.getElementById('s2'); s2.innerHTML = `
-        <div style="">
-            <span style="font-size: 3rem; font-weight: bold; color: lightgrey;
-            margin-left: 3rem;">FOOD TOURS</span>
+        <div style="width: 100%; height: 100%; display: flex; justify-content: space-between;">
+            <div style="height: 100%;">
+                <img src="/static/assets/photo4.jpeg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <div style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            justify-content: space-evenly;">
+                <span style="font-size: 1rem; font-weight: bold; color: lightgrey;">FOOD TOURS</span>
+                    <a href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1"
+                        style="text-align: end;">
+                          Warsaw <br> Traditional Food Tour <br> with Adrian</a>
+                    <a href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
+                      Krakow: <br> Eat Like a Local <br> - Polish Food Tour</a>
+            </div>
+            <div style="height: 100%;">
+                <img src="/static/assets/photo3.jpeg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+
         </div>`;
 }
 function fillS3() {
@@ -40,12 +87,31 @@ function fillS3() {
             margin-left: 3rem;">EVENTS & PRIVATE TOURS</span>
         </div>`;
 }
+const myReviewsPhotos = ['/static/assets/rev1.jpg', '/static/assets/rev2.jpg', '/static/assets/rev3.jpg', '/static/assets/rev4.jpg',
+'/static/assets/rev5.jpg'];
+let rev1Index = 0;
+let rev2Index = 4;
+function myReviewsPanelPhoto1() {
+    let panel = createPhotoPanel('ppReviews1', myReviewsPhotos);
+
+    document.getElementById('photoPanelMyReviews').appendChild(panel);
+}
+function myReviewsPanelPhoto2() {
+    let panel = createPhotoPanel('ppReviews2', myReviewsPhotos);
+
+    document.getElementById('photoPanelMyReviews').appendChild(panel);
+}
 function sectionMyReviews() {
     return `
-        <div class="section-uni" style="flex-direction: column; background: lightgrey;">
+        <div style="display: flex; flex-direction: column; background: lightgrey; width: 100%; height: 100%; ">
             <span class="section-title" style="color: black;">MY REVIEWS</span>
-            <div style="width: 100%; border: 1px solid black;">
-
+            <div id="photoPanelMyReviews" style="border: 1px solid black; display: flex; justify-content: space-between;">
+                <div style="background: white; ">
+                    <img id="imgRev1" style="max-width: 100%; max-height: 100%; object-fit: contain;" src="/static/assets/rev1.jpg">
+                </div>
+                <div>
+                    <img id="imgRev2" style="max-width: 100%; max-height: 100%; object-fit: contain;" src="/static/assets/rev2.jpg">
+                </div>
             </div>
         </div>
     `;
@@ -98,25 +164,27 @@ function sectionFooter() {
       </div>
     `;
 }
+
 // PHOTO PANEL
-const p1Photos = getS1PanelPhotos();
-let p1Index = 0;
+
 
 const opinionPhotos1 = [];
-function createPhotoPanel(photoPanelId, photos) {
+function createPhotoPanel(photoPanelId, photos, height = '100%', width = '100%') {
     const photoPanel = document.createElement('div');
     photoPanel.id = photoPanelId;
-    photoPanel.style.width = '100%';
-    photoPanel.style.height = '100%';
+    photoPanel.style.width = width;
+    photoPanel.style.height = height;
     photoPanel.style.backgroundImage = `url('${photos[0]}')`;
     photoPanel.setAttribute('data-current', photos[0]);
     photoPanel.style.backgroundSize = 'cover';
     photoPanel.style.backgroundPosition = 'center';
     photoPanel.style.backgroundRepeat = 'no-repeat';
     photoPanel.style.transition = 'background-image 1s ease';
+
     const photoInsidePanel = document.createElement('div');
     photoInsidePanel.id = photoPanelId + 'InsidePanel';
     photoInsidePanel.className = 'panel-zdjec';
+
     let photoButtonsPanelId = photoPanelId + 'buttonsPanel';
     photoPanel.setAttribute('data-photoButtonsPanelId', photoButtonsPanelId);
     let photoButtonsHTML = ``;
@@ -195,20 +263,29 @@ function createNavbar() {
 window.onload = () => {
     const body2 = document.getElementById('body2');
     body2.appendChild(createNavbar());
-    body2.appendChild(createSection('s1'));
-    document.getElementById('s1').appendChild(createPhotoPanel('pp1', p1Photos));
-    setInterval(() => { changePanelPhoto('pp1', 'next'); }, 2000);
 
-    let s2 = createSection('s2'); let s3 = createSection('s3'); let s4 = createSection('s4');
+    let s1 = createSection('s1'); let s2 = createSection('s2'); let s3 = createSection('s3');
+    let s4 = createSection('s4');
     let sMyReviews = createSection('sMyReviews'); let sFooter = createSection('sFooter');
     s4.innerHTML = sectionAboutMe(); sMyReviews.innerHTML = sectionMyReviews(); sFooter.innerHTML = sectionFooter();
     s2.style.borderBottom = '1px solid lightgrey'; s3.style.borderBottom = '1px solid lightgrey';
     s4.style.borderBottom = '1px solid lightgrey'; sMyReviews.style.borderBottom = '1px solid lightgrey';
+    body2.appendChild(s1);
     body2.appendChild(s2); body2.appendChild(s3); body2.appendChild(s4); body2.appendChild(sMyReviews);
     body2.appendChild(sFooter);
-    fillS2(); fillS3();
+    fillS1(); fillS2(); fillS3();
     document.getElementById('footer').style.width = `calc(100vw - ${getScrollbarWidth()}px)`;
     document.getElementById('footer').style.height = returnClientView()[1] + 'px';
+    setInterval(() => { changePanelPhoto('pp1', 'next');
+         let p1 = document.getElementById('imgRev1'); let p2 = document.getElementById('imgRev2');
+         [p1, p2].forEach(e => {
+            if (rev1Index === myReviewsPhotos.length - 1)
+                rev1Index = 0;
+            else
+                rev1Index++;
+            e.src = myReviewsPhotos[rev1Index];
+         });
+     }, 2000);
 }
 document.addEventListener('mousemove', function(event) {
     const navbar = document.getElementById('navbar');

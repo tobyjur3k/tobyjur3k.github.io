@@ -305,3 +305,23 @@ document.addEventListener('mousemove', function(event) {
       navbar.style.top = `-${navbarHeight}px`; // Znikaj, kiedy myszka opuści navbar
     });
 });
+
+window.addEventListener('resize', checkViewportWidth);
+
+function s2w480() {
+    let s2 = document.getElementById('s2'); s2.innerHTML = ''; console.log('koniec');
+}
+function checkViewportWidth() {
+  const width = window.innerWidth;
+
+  if (width <= 480) {
+    console.log("To jest mały ekran (telefon)");
+    s2w480();
+  } else if (width <= 768) {
+    console.log("To jest średni ekran (tablet)");
+  } else if (width <= 1024) {
+    console.log("To jest duży ekran (mały laptop)");
+  } else {
+    console.log("To jest bardzo duży ekran (desktop)");
+  }
+}

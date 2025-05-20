@@ -28,21 +28,14 @@
     @media (min-width: 768px) {
 
     }
+    .navbar {  }
+    .navbar-buttons { display: flex; gap: 4rem; width: auto; margin-right: 150px; }
+    .navbar button { background: transparent; border: none; font-size: 1rem; padding: 1rem;  border-radius: 2rem; font-weight: bold; }
 
+    .section { display: flex; justify-content: center; min-height: 100vh; min-height: 100dvh; text-align: center; }
+    .section1 { align-items: end; display: flex; justify-content: center; min-height: 90vh; text-align: center; }
+    .section2 { display: flex; justify-content: space-between; width: 100%; padding: 0 3rem 0 3rem; }
 
-    .section {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  min-height: 100dvh; /* nadpisuje w nowoczesnych przeglądarkach */
-  padding: 20px;
-  text-align: center;
-}
-    /* Example second section */
-
-    .section2 {
-      display: flex; justify-content: space-between; width: 100%; padding: 0 3rem 0 3rem;
-    }
     .s2-foodtours { flex: 2; display: flex; justify-content: center; align-items: center; align-content: center; }
     .s2-e { flex: 4; display: flex; justify-content: center; align-items: center; }
     .footer { display: flex; flex-direction: column; width: 100%; justify-content: space-between; padding: 0; }
@@ -53,40 +46,19 @@
     .p-aboutme { font-size: 2rem; font-weight: bold; }
 
     .section3 { background-color: grey; display: flex; flex-direction: column;  }
-    .section1 { padding: 30px; }
 
-    .carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh; /* nadpisuje */
-  margin: 0 auto;
-  max-height: 100vh;
-  max-height: 100dvh;
-}
-
-    .carousel-track {
-      display: flex; width: 100vw;
-      transition: transform 0.5s ease; background: 1px solid black;
-    }
-
-    .carousel-track img { height: 100vh; height: 100dvh; width: 100vw; object-fit: cover; aspect-ratio: 16 / 9; flex-shrink: 0; }
-
-    .carousel-btn {
-      position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 2rem; padding: 0.5rem 1rem; cursor: pointer; z-index: 2; }
-
+    .carousel { position: relative; overflow: hidden; width: 95vw; height: 90vh; margin: 0 auto; max-height: 100vh; max-height: 100dvh; }
+    .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
+    .carousel-track img { height: 100%; width: 100%; object-fit: cover; flex-shrink: 0; }
+    .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 2rem; padding: 0.5rem 1rem; cursor: pointer; z-index: 2; }
     .carousel-btn.prev { left: 10px; }
-
     .carousel-btn.next { right: 10px; }
-
     .carousel-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 3; }
-
     .dot { width: 12px; height: 12px; background: white; border-radius: 50%; opacity: 0.5; cursor: pointer; }
     .dot.active { opacity: 1; }
-    .rev { display: flex; background: white; flex-direction: column; padding: 1rem; text-align: start; width: 600px; height: auto; gap: 0.5rem;
-     border-radius: 2rem; }
-    .navbar { display: flex; justify-content: center; min-height: 20vh; text-align: center; position: absolute; z-index: 3; background: green; opacity: 35%; width: 100%;  }
+
+    .rev { display: flex; background: white; flex-direction: column; padding: 1rem; text-align: start; width: 600px; height: auto; gap: 0.5rem; border-radius: 2rem; }
+
     .section2-max-w-600 { max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; position: relative; overflow: hidden; }
     .section2-max-w-600 img { padding: 1rem; }
     .section4-max-w-600 { max-height: 100dvh; height: 100dvh; position: relative; overflow: hidden; justify-content: flex-start; flex-direction: column; justify-content: space-between; }
@@ -114,10 +86,18 @@
   </style>
 </head>
 <body>
-  <nav class="navbar" style="">
-    EO
+  <nav class="navbar" style="display: flex; justify-content: center; min-height: 10vh; z-index: 3; position: sticky; top: 0; background: white; width: 100%;">
+    <div style="display: flex; justify-content: space-between; width: 95%;">
+      <img src="/static/assets/logo_napis_bez_tla.png" style="height: 10vh; width: 5vw;">
+      <div class="navbar-buttons">
+        <button onclick="">FOOD TOURS</button>
+        <button>EVENTS & PRIVATE TOURS</button>
+        <button>ABOUT ME</button>
+        <button>MY REVIEWS</button>
+      </div>
+    </div>
   </nav>
-  <section class="section section1" style="padding: 0;">
+  <section class="section1">
     <div class="carousel">
       <div class="carousel-track">
         <img src="/static/assets/photo1.jpeg" alt="Slide 1">
@@ -211,7 +191,7 @@
       <div id="revs3" style="display: flex; overflow: auto; justify-content: space-evenly;"></div>
     </div>
   </section>
-  <section class="section5-max-w-600">
+  <section class="section5-max-w-600" style="display: none;">
 
   </section>
   <section class="section footer">

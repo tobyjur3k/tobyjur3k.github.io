@@ -28,11 +28,11 @@
     @media (min-width: 768px) {
 
     }
-    .navbar {  }
+    .navbar { display: flex; justify-content: center; min-height: 10vh; z-index: 3; position: sticky; top: 0; background: white; width: 100%; }
     .navbar-buttons { display: flex; gap: 4rem; width: auto; margin-right: 150px; }
     .navbar button { background: transparent; border: none; font-size: 1rem; padding: 1rem;  border-radius: 2rem; font-weight: bold; }
 
-    .section { display: flex; justify-content: center; min-height: 100vh; min-height: 100dvh; text-align: center; }
+    .section { display: flex; justify-content: center; min-height: 100dvh; text-align: center; }
     .section1 { align-items: end; display: flex; justify-content: center; min-height: 90vh; text-align: center; }
     .section2 { display: flex; justify-content: space-between; width: 100%; padding: 0 3rem 0 3rem; }
 
@@ -69,6 +69,7 @@
 
     /* Optional for small screens */
     @media (max-width: 600px) {
+
       .img-aboutme { width: 100vw; height: 100vh; }
       .p-aboutme { display: none; }
       .carousel-btn { font-size: 1.5rem; } .section2 { display: none; }
@@ -77,6 +78,9 @@
       .section { max-height: 100dvh; height: 100dvh; }  .carousel-track img { max-height: 50dvh; height: 50dvh; }
       .dot { width: 10px; height: 10px; }
       .socials-img { width: 100px; height: 100px; } .carousel { max-height: 50dvh; height: 50dvh; }
+      .navbar { display: none; }
+      .section1 { height: 100dvh; }
+      .carousel { display: none; }
     }
     @media (min-width: 601px)
       { .section2-max-w-600 { display: none !important; } .section4-max-w-600 { display: none !important; }}
@@ -86,7 +90,7 @@
   </style>
 </head>
 <body>
-  <nav class="navbar" style="display: flex; justify-content: center; min-height: 10vh; z-index: 3; position: sticky; top: 0; background: white; width: 100%;">
+  <nav class="navbar" style="">
     <div style="display: flex; justify-content: space-between; width: 95%;">
       <img src="/static/assets/logo_napis_bez_tla.png" style="height: 10vh; width: 5vw;">
       <div class="navbar-buttons">
@@ -97,7 +101,7 @@
       </div>
     </div>
   </nav>
-  <section class="section1">
+  <section class="section1" style="background: blue;">
     <div class="carousel">
       <div class="carousel-track">
         <img src="/static/assets/photo1.jpeg" alt="Slide 1">

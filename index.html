@@ -28,14 +28,15 @@
     @media (min-width: 768px) {
 
     }
-    .navbar { display: flex; justify-content: center; min-height: 10vh; z-index: 3; position: sticky; top: 0; background: white; width: 100%; }
+    .navbar { display: flex; justify-content: center; min-height: 10vh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; }
     .navbar-buttons { display: flex; gap: 4rem; width: auto; margin-right: 150px; }
     .navbar button { background: transparent; border: none; font-size: 1rem; padding: 1rem; border-radius: 2rem; font-weight: bold; }
     .navbar-logo { height: 10vh; width: 5vw; }
-    .section { display: flex; justify-content: center; min-height: 100dvh; text-align: center; }
-    .section1 { align-items: end; display: flex; justify-content: center; min-height: 90vh; text-align: center; }
+    .section { display: flex; justify-content: center; height: 100dvh; text-align: center;  }
+    .section1 { align-items: end; display: flex; justify-content: center; min-height: 100vh; text-align: center; }
+    .section1-text { position: absolute; right: 2rem; bottom: 2rem; z-index: 4; background: white; border: 1px solid black;  }
     .section2 { display: flex; justify-content: space-between; width: 100%; padding: 0 3rem 0 3rem; }
-
+    .section3 { width: 100%; height: 50vh; display: flex; flex-direction: column; background: grey; }
     .s2-foodtours { flex: 2; display: flex; justify-content: center; align-items: center; align-content: center; }
     .s2-e { flex: 4; display: flex; justify-content: center; align-items: center; }
     .footer { display: flex; flex-direction: column; width: 100%; justify-content: space-between; padding: 0; }
@@ -44,8 +45,6 @@
     .section4 { background-color: white; padding: 2rem 11rem 2rem 11rem;  }
     .img-aboutme { width: 40vw; height: 95vh; }
     .p-aboutme { font-size: 2rem; font-weight: bold; }
-
-    .section3 { background-color: grey; display: flex; flex-direction: column;  }
 
     .carousel { position: relative; overflow: hidden; width: 95vw; height: 90vh; margin: 0 auto; max-height: 100vh; max-height: 100dvh; }
     .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
@@ -81,7 +80,8 @@
       .navbar-logo { height: 10dvh; width: 20vw; }
       .navbar-buttons { gap: 0; margin-right: 0; }
       .navbar button { padding: 0; font-size: 0.9rem; }
-      .section1 { height: 90dvh; flex-direction: column; align-items: start; justify-content: start;  }
+      .section1 { height: 90dvh; flex-direction: column; align-items: start; justify-content: start; }
+      .section1-text { display: block; }
     }
     @media (min-width: 601px)
       { .section2-max-w-600 { display: none !important; } .section4-max-w-600 { display: none !important; }}
@@ -123,21 +123,25 @@
         <span data-index="3" class="dot"></span>
         <span data-index="4" class="dot"></span>
       </div>
-    </div>
-    <div class="section1-text">
+      <div class="section1-text" >
       I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey <br>
       through the city’s rich culinary traditions, hidden gems, and warm hospitality. <br>
       If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the <br>
       Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.<br>
       We can’t wait to share it with you. <b>Just Be My Guest!</b><br>
     </div>
+    </div>
+
   </section>
   <section class="section section2">
       <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo3.jpeg" style="height: 90vh; object-fit: cover; flex-shrink: 0;"></div>
       <div style="display: flex; flex-direction: column;">
-        <div class="s2-e"><strong>Warsaw Traditional Food Tour with Adrian</strong></div>
+        <div class="s2-e"><a href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1">
+          <strong>Warsaw Traditional Food Tour with Adrian</strong>
+        </a></div>
         <div class="s2-foodtours"><p style="font-size: 3rem; font-weight: bold;">FOOD TOURS</p></div>
-        <div class="s2-e"><strong>Krakow: Eat Like a Local - Polish Food Tour</strong></div>
+        <div class="s2-e"><a href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
+          <strong>Krakow: Eat Like a Local - Polish Food Tour</strong></a></div>
       </div>
       <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo4.jpeg" style="height: 90vh; object-fit: cover; flex-shrink: 0;"></div>
   </section>
@@ -155,7 +159,16 @@
     <p>Krakow: Eat Like a Local - Polish Food Tour</p>
   </div>
 </section>
-  <section class="section section3" style="display: none; ">
+  <section class="section section3">
+    <div style="display: flex; flex-direction: column; height: 100%; justify-content: center; ">
+      <p style="font-size: 2rem; font-weight: bold;">EVENTS & PRIVATE TOURS</p>
+      <span style="font-size: 2rem;">Corporate Events & Private Food Tours <br>
+      Want to turn your business trip or group travel into something truly unforgettable? <br>
+      Just contact me – I’ll take care of everything to make your group’s experience truly special! <br>
+      <a href="mailto:book@bmgpoland.com">book@bmgpoland.com</a> <br>
+      +48 888 805 198
+      </span>
+    </div>
   </section>
   <section class="section section4">
     <div style="display: flex;">

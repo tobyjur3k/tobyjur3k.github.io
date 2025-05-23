@@ -34,7 +34,8 @@
     .navbar-logo { height: 10vh; width: 5vw; }
     .section { display: flex; justify-content: center; height: 100dvh; text-align: center;  }
     .section1 { align-items: end; display: flex; justify-content: center; min-height: 100vh; text-align: center; }
-    .section1-text { position: absolute; right: 2rem; bottom: 0; z-index: 4; background: white; border: 1px solid black; width: 40%; background: blue; opacity: 35%; color: white; font-size: 1.5rem;  }
+    .section1-text { display: none; padding: 1rem; font-size: 1.2rem; }
+    .carousel-text { position: absolute; right: 2rem; bottom: 0; z-index: 4; border: 1px solid black; width: 40%; background: red; opacity: 55%; color: white; font-size: 1.5rem;  }
     .section2 { display: flex; justify-content: space-between; width: 100%; padding: 0 3rem 0 3rem; }
     .section3 { width: 100%; height: 50vh; display: flex; flex-direction: column; background: grey; }
     .s2-foodtours { flex: 2; display: flex; justify-content: center; align-items: center; align-content: center; }
@@ -63,7 +64,7 @@
     .section4-max-w-600 { max-height: 100dvh; height: 100dvh; position: relative; overflow: hidden; justify-content: flex-start; flex-direction: column; justify-content: space-between; }
     .section4-max-w-600 img { padding: 1rem; max-height: 80dvh; height: 80dvh; max-width: 100dvw; width: 100dvw; object-fit: cover; flex-shrink: 0; z-index: 1; bottom: 0; position: absolute; }
     .section4-max-w-600 p {  }
-    .section5-max-w-600 { max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; background: green; }
+    .section5-max-w-600 { display: none; }
     .section5 { background: darkgreen; flex-direction: column; padding: 5rem; }
 
     /* Optional for small screens */
@@ -81,7 +82,9 @@
       .navbar-buttons { gap: 0; margin-right: 0; }
       .navbar button { padding: 0; font-size: 0.9rem; }
       .section1 { height: 90dvh; flex-direction: column; align-items: start; justify-content: start; }
+      .carousel-text { display: none; }
       .section1-text { display: block; }
+      .section5-max-w-600 { display: block; max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; background: green; }
     }
     @media (min-width: 601px)
       { .section2-max-w-600 { display: none !important; } .section4-max-w-600 { display: none !important; }}
@@ -123,7 +126,7 @@
         <span data-index="3" class="dot"></span>
         <span data-index="4" class="dot"></span>
       </div>
-      <div class="section1-text" >
+      <div class="carousel-text" >
         <span>
           I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey <br>
           through the city’s rich culinary traditions, hidden gems, and warm hospitality. <br>
@@ -133,7 +136,15 @@
         </span>
       </div>
     </div>
-
+    <div class="section1-text">
+      <span>
+          I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
+          through the city’s rich culinary traditions, hidden gems, and warm hospitality.
+          If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the
+          Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.
+          We can’t wait to share it with you. <b>Just Be My Guest!</b>
+      </span>
+    </div>
   </section>
   <section class="section section2">
       <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo3.jpeg" style="height: 90vh; object-fit: cover; flex-shrink: 0;"></div>
@@ -221,8 +232,46 @@
       <div id="revs3" style="display: flex; overflow: auto; justify-content: space-evenly;"></div>
     </div>
   </section>
-  <section class="section5-max-w-600" style="display: none;">
-
+  <section class="section5-max-w-600">
+    <div style="display: flex; flex-direction: column; text-align: center; align-items: center; gap: 1rem;">
+      <p style="color: white; font-size: 3.5rem; font-weight: bold;">MY REVIEWS</p>
+      <div class="rev" style="width: 80%;">
+          <div style="color: green;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <div><strong>Super fun, insightful, and tasty tour!</strong></div>
+          <div></div>
+          <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
+         He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
+        </div>
+      <div class="rev" style="width: 80%;">
+          <div style="color: green;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <div><strong>Super fun, insightful, and tasty tour!</strong></div>
+          <div></div>
+          <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
+         He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
+        </div>
+      <div class="rev" style="width: 80%;">
+          <div style="color: green;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <div><strong>Super fun, insightful, and tasty tour!</strong></div>
+          <div></div>
+          <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
+         He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
+        </div>
+      <div class="rev" style="width: 80%;">
+          <div style="color: green;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <div><strong>Super fun, insightful, and tasty tour!</strong></div>
+          <div></div>
+          <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
+         He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
+        </div>
+    </div>
   </section>
   <section class="section footer">
       <div><img src="/static/assets/logo_napis_bez_tla3.png" style="width: 60vw; height: 50vh;"></div>

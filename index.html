@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>Trip with [Name]</title>
   <style>
     /* Reset and base styles */
@@ -23,23 +25,35 @@
       background-color: #f9f9f9;
       color: #333;
     }
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+    .inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
     /* Desktop adjustments */
     @media (min-width: 768px) {
 
     }
     .navbar { display: flex; justify-content: center; min-height: 10vh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; }
-    .navbar-buttons { display: flex; gap: 4rem; width: auto; margin-right: 150px; }
-    .navbar button { background: transparent; border: none; font-size: 1rem; padding: 1rem; border-radius: 2rem; font-weight: bold; }
-    .navbar-logo { height: 10vh; width: 5vw; }
+    .navbar-buttons { display: flex; gap: 2rem; width: auto; margin-right: 150px; align-items: center; }
+    .navbar button { background: transparent; font-size: 2rem; border: none; font-weight: bold; height: 50%; }
+    .navbar button:hover { background: lightgrey; }
+    .navbar-logo { height: 10vh; width: 5vw; margin-left: 15rem; }
     .section { display: flex; justify-content: center; height: 100dvh; text-align: center;  }
     .section1 { align-items: end; display: flex; justify-content: center; min-height: 100vh; text-align: center; }
     .section1-text { display: none; padding: 1rem; font-size: 1.2rem; }
-    .carousel-text { position: absolute; right: 2rem; bottom: 0; z-index: 4; border: 1px solid black; width: 40%; background: red; opacity: 55%; color: white; font-size: 1.5rem;  }
+    .carousel-text {   }
     .section2 { display: flex; justify-content: space-between; width: 100%; padding: 0 3rem 0 3rem; }
     .section3 { width: 100%; height: 50vh; display: flex; flex-direction: column; background: grey; }
     .s2-foodtours { flex: 2; display: flex; justify-content: center; align-items: center; align-content: center; }
-    .s2-e { flex: 4; display: flex; justify-content: center; align-items: center; }
+    .s2-e { flex: 4; display: flex; justify-content: center; flex-direction: column; gap: 0.5rem; }
     .footer { display: flex; flex-direction: column; width: 100%; justify-content: space-between; padding: 0; }
     .socials { justify-content: center; display: flex; text-align: center; overflow: auto; }
     .socials-img { width: 200px; height: 200px; }
@@ -96,20 +110,26 @@
 <body>
   <nav class="navbar" >
     <div style="display: flex; justify-content: space-between; width: 95%;">
-      <img src="/static/assets/logo_napis_bez_tla.png" class="navbar-logo">
+      <img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla.png" class="navbar-logo">
       <div class="navbar-buttons">
-        <button onclick="">FOOD TOURS</button>
-        <button>EVENTS & PRIVATE TOURS</button>
-        <button>ABOUT ME</button>
-        <button>MY REVIEWS</button>
+        <button onclick="s('s2');">FOOD TOURS</button>
+        <button onclick="s('s3');">EVENTS & PRIVATE TOURS</button>
+        <button onclick="s('s4');">ABOUT ME</button>
+        <button onclick="s('s5');">MY REVIEWS</button>
       </div>
 <!--      <div class="navbar-buttons-w600">-->
 <!--        <button>:</button>-->
 <!--      </div>-->
     </div>
   </nav>
-  <section class="section1" >
+  <section id="s1" tabindex="1" class="section1" >
     <div class="carousel">
+      <div class="carousel-text" style="position: absolute; left: 8rem; top: 0rem; z-index: 4; background: blue; opacity: 65%;
+       color: white; font-size: 1.5rem; height: auto;">
+        <span class="bebas-neue-regular" style="font-size: 3.5rem; font-weight: bold;" >
+          Join BeMyGuest - Your Authentic Food Experience in Poland
+        </span>
+      </div>
       <div class="carousel-track">
         <img src="/static/assets/photo1.jpeg" alt="Slide 1">
         <img src="/static/assets/inne1.jpeg" alt="Slide 2">
@@ -126,12 +146,13 @@
         <span data-index="3" class="dot"></span>
         <span data-index="4" class="dot"></span>
       </div>
-      <div class="carousel-text" >
-        <span>
-          I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey <br>
-          through the city’s rich culinary traditions, hidden gems, and warm hospitality. <br>
-          If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the <br>
-          Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.<br>
+      <div class="carousel-text" style="position: absolute; right: 2rem; bottom: 0; z-index: 4; border: 1px solid black; width: 40%; background: blue; opacity: 60%;
+       color: white; font-size: 1.5rem;">
+        <span style="text-wrap: wrap;">
+          I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
+          through the city’s rich culinary traditions, hidden gems, and warm hospitality.
+          If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the
+          Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.
           We can’t wait to share it with you. <b>Just Be My Guest!</b>
         </span>
       </div>
@@ -146,15 +167,21 @@
       </span>
     </div>
   </section>
-  <section class="section section2">
+  <section id="s2" tabindex="2" class="section section2">
       <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo3.jpeg" style="height: 90vh; object-fit: cover; flex-shrink: 0;"></div>
       <div style="display: flex; flex-direction: column;">
-        <div class="s2-e"><a href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1">
+        <div class="s2-e" style="align-items: start;"><a style="margin-left: 1rem;"
+                href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1">
           <strong>Warsaw Traditional Food Tour with Adrian</strong>
-        </a></div>
+        </a>
+        <span style="padding: 0 3rem 3rem 3rem;">I’ll personally take you on a journey through the city’s rich culinary traditions, hidden gems, and warm hospitality</span>
+        </div>
         <div class="s2-foodtours"><p style="font-size: 3rem; font-weight: bold;">FOOD TOURS</p></div>
-        <div class="s2-e"><a href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
-          <strong>Krakow: Eat Like a Local - Polish Food Tour</strong></a></div>
+        <div class="s2-e" style="align-items: end;">
+          <a style="margin-right: 1rem;" href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
+          <strong>Krakow: Eat Like a Local - Polish Food Tour</strong></a>
+        <span style="padding: 0 3rem 3rem 3rem;">If you're planning a trip to Cracow, don’t miss my delicious food tour through the Podgórze and Kazimierz districts, led by my amazing team of
+          passionate local guides.</span></div>
       </div>
       <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo4.jpeg" style="height: 90vh; object-fit: cover; flex-shrink: 0;"></div>
   </section>
@@ -169,10 +196,10 @@
   <img src="/static/assets/photo4.jpeg" style="max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; object-fit: cover; flex-shrink: 0; z-index: 1;">
   <div style="position: absolute; top: 20px; right: 20px; z-index: 2; padding: 10px 15px; background-color: transparent; color: black; border: 0.5rem solid grey; border-radius: 2rem; cursor: pointer;
            text-align: end; gap: 0.5rem; display: flex; flex-direction: column; font-weight: bold;">
-    <p>Krakow: Eat Like a Local - Polish Food Tour</p>
+    <p>Kraków: Eat Like a Local - Polish Food Tour</p>
   </div>
 </section>
-  <section class="section section3">
+  <section id="s3" tabindex="3" class="section section3">
     <div style="display: flex; flex-direction: column; height: 100%; justify-content: center; ">
       <p style="font-size: 2rem; font-weight: bold;">EVENTS & PRIVATE TOURS</p>
       <span style="font-size: 2rem;">Corporate Events & Private Food Tours <br>
@@ -183,15 +210,15 @@
       </span>
     </div>
   </section>
-  <section class="section section4">
+  <section id="s4" tabindex="4" class="section section4">
     <div style="display: flex;">
       <div style="display: flex; flex-direction: column; justify-content: space-evenly; align-content: center; align-items: center; padding-right: 4rem;">
         <p style="font-size: 4rem; font-weight: bold;">ABOUT ME</p>
-        <p class="p-aboutme">I’m a local food tour guide, born and raised in the Polish countryside, where great food and
-        stories were always around me. With years of experience in hospitality, a degree from the
-        Agricultural University, and even a stint as a folk dancer, I’m all about sharing the real taste
-        and culture of Poland. Let’s explore it together – Just BeMyGuest!
-        I’m waiting for you – Just BeMyGuest!</p></div>
+        <p class="p-aboutme">I’m a local food tour guide, born and raised in the Polish countryside, where great food and stories were always around me.
+With years of experience in hospitality, a degree from the Agricultural University, and even a stint as a folk dancer,
+I’m all about sharing the real taste and culture of Poland.
+Let’s explore it together - I’m waiting for you!
+                Just BeMyGuest</p></div>
       <img src="/static/assets/photo2.jpeg" class="img-aboutme">
     </div>
   </section>
@@ -205,7 +232,7 @@
         I’m waiting for you – Just BeMyGuest!</p></div>
     <img src="/static/assets/photo2.jpeg" style="border: 1px solid black;">
   </section>
-  <section class="section section5">
+  <section id="s5" tabindex="5" class="section section5">
     <div style="flex: 3; display: flex; justify-content: space-between; flex-direction: column; gap: 1rem; ">
       <div id="revs1" style="display: flex; overflow: auto; justify-content: space-evenly;"></div>
       <div id="revs2" style="display: flex; overflow: auto; justify-content: space-between; text-align: center; align-items: center;">
@@ -273,14 +300,8 @@
         </div>
     </div>
   </section>
-  <section class="section footer">
-      <div><img src="/static/assets/logo_napis_bez_tla3.png" style="width: 60vw; height: 50vh;"></div>
-
-    <span>
-      Corporate Events & Private Food Tours <br>
-      Want to turn your business trip or group travel into something truly unforgettable? Just contact me – I’ll take care of everything to make your group’s experience truly special!
-    </span>
-    <a href="book@bmgpoland.com">book</a>
+  <section id="footer" class="section footer" >
+      <div ><img src="/static/assets/logo_napis_bez_tla3.png" style="width: 60vw; height: 50vh;"></div>
     <span>
       Be My Guest Adrian Cwiklinski | Tax number: 6821749133 | Polish Business Registry <br>
       Number: 540103360 | Registered in Poland
@@ -293,9 +314,7 @@
       <a href="https://youtube.com" target="_blank"><img src="/static/assets/YT.png" class="socials-img"></a>
     </div>
     <span>Privacy policy</span>
-    <p>&copy; 2025 Adrian Ćwikliński. Wszelkie prawa zastrzeżone <br> &copy; 2025 Adrian Ćwikliński - All rights reserved</p>
-
-    <a href="">pdf</a>
+    <p>&copy; 2025 Adrian Ćwikliński - All rights reserved</p>
 
   </section>
 
@@ -307,6 +326,8 @@
     const dots = document.querySelectorAll('.dot');
 
     let currentIndex = 0;
+
+    function s(id) { document.getElementById(id).focus(); }
 
     function revs() {
       let revs1 = [

@@ -41,7 +41,7 @@
     @media (min-width: 768px) {
 
     }
-    .navbar { display: flex; justify-content: center; min-height: 10vh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; }
+    .navbar { display: flex; justify-content: center; min-height: 10vh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 10vh;}
     .navbar-buttons { display: flex; gap: 2rem; width: auto; margin-right: 150px; align-items: center; }
     .navbar button { background: transparent; font-size: 2rem; border: none; font-weight: bold; height: 50%; }
     .navbar button:hover { background: lightgrey; }
@@ -54,7 +54,7 @@
     .section3 { width: 100%; height: 50vh; display: flex; flex-direction: column; background: grey; }
     .s2-foodtours { flex: 2; display: flex; justify-content: center; align-items: center; align-content: center; }
     .s2-e { flex: 4; display: flex; justify-content: center; flex-direction: column; gap: 0.5rem; }
-    .footer { display: flex; flex-direction: column; width: 100%; justify-content: space-between; padding: 0; }
+    .footer { display: flex; flex-direction: column; width: 100%; height: 90vh; justify-content: space-between; padding: 0; }
     .socials { justify-content: center; display: flex; text-align: center; overflow: auto; }
     .socials-img { width: 200px; height: 200px; }
     .section4 { background-color: white; padding: 2rem 11rem 2rem 11rem;  }
@@ -130,12 +130,12 @@
           Join BeMyGuest - Your Authentic Food Experience in Poland
         </span>
       </div>
-      <div class="carousel-track">
-        <img src="/static/assets/photo1.jpeg" alt="Slide 1">
-        <img src="/static/assets/inne1.jpeg" alt="Slide 2">
-        <img src="/static/assets/aboutme2.jpeg" alt="Slide 3">
-        <img src="/static/assets/new4.jpeg" alt="Slide 4">
-        <img src="/static/assets/inne2.jpg" alt="Slide 5">
+      <div id="c-track" class="carousel-track">
+<!--        <img src="/static/assets/photo1.jpeg" alt="Slide 1">-->
+<!--        <img src="/static/assets/inne1.jpeg" alt="Slide 2">-->
+<!--        <img src="/static/assets/aboutme2.jpeg" alt="Slide 3">-->
+<!--        <img src="/static/assets/new4.jpeg" alt="Slide 4">-->
+<!--        <img src="/static/assets/inne2.jpg" alt="Slide 5">-->
       </div>
       <button class="carousel-btn prev">&#10094;</button>
       <button class="carousel-btn next">&#10095;</button>
@@ -200,14 +200,19 @@
   </div>
 </section>
   <section id="s3" tabindex="3" class="section section3">
-    <div style="display: flex; flex-direction: column; height: 100%; justify-content: center; ">
-      <p style="font-size: 2rem; font-weight: bold;">EVENTS & PRIVATE TOURS</p>
+    <div style="display: flex; height: 100%; justify-content: center; ">
+      <div style="display: flex; gap: 2rem; padding: 3rem;">
+          <img src="/static/assets/inne5.jpg" style="height: 100%;">
+          <img src="/static/assets/inne4.jpg" style="height: 100%;">
+          <img src="/static/assets/inne6.jpg" style="height: 100%;">
+      </div>
+        <div style="display: flex; flex-direction: column; justify-content: center;"><p style="font-size: 2rem; font-weight: bold;">EVENTS & PRIVATE TOURS</p>
       <span style="font-size: 2rem;">Corporate Events & Private Food Tours <br>
       Want to turn your business trip or group travel into something truly unforgettable? <br>
       Just contact me – I’ll take care of everything to make your group’s experience truly special! <br>
       <a href="mailto:book@bmgpoland.com">book@bmgpoland.com</a> <br>
       +48 888 805 198
-      </span>
+      </span></div>
     </div>
   </section>
   <section id="s4" tabindex="4" class="section section4">
@@ -301,24 +306,25 @@ Let’s explore it together - I’m waiting for you!
     </div>
   </section>
   <section id="footer" class="section footer" >
-      <div ><img src="/static/assets/logo_napis_bez_tla3.png" style="width: 60vw; height: 50vh;"></div>
+      <div><img src="/static/assets/logo_napis_bez_tla3.png" style="width: 30%; height: 100%;"></div>
     <span>
       Be My Guest Adrian Cwiklinski | Tax number: 6821749133 | Polish Business Registry <br>
       Number: 540103360 | Registered in Poland
     </span>
-    <span style="margin-top: 50px;">FIND ME</span>
+    <div><span>FIND ME</span>
     <div class="socials">
       <a href="https://facebook.com" target="_blank"><img src="/static/assets/trip.png" class="socials-img"></a>
       <a href="https://instagram.com" target="_blank"><img src="/static/assets/insta.png" class="socials-img"></a>
       <a href="https://youtube.com" target="_blank"><img src="/static/assets/fb.png" class="socials-img"></a>
       <a href="https://youtube.com" target="_blank"><img src="/static/assets/YT.png" class="socials-img"></a>
-    </div>
+    </div></div>
     <span>Privacy policy</span>
     <p>&copy; 2025 Adrian Ćwikliński - All rights reserved</p>
 
   </section>
 
   <script>
+        f1();
     const track = document.querySelector('.carousel-track');
     const slides = Array.from(track.children);
     const prevBtn = document.querySelector('.carousel-btn.prev');
@@ -326,6 +332,19 @@ Let’s explore it together - I’m waiting for you!
     const dots = document.querySelectorAll('.dot');
 
     let currentIndex = 0;
+
+    function f1() {
+      // funkcja uzupełnia panel zdjęciami
+
+      const p = ['Photo1.jpeg', 'inne1.jpeg'];
+      let debug = true;
+      const c = document.getElementById('c-track');
+      if (debug) { p.forEach((e, counter) => { let img = document.createElement('img'); img.alt = 'Slide ' + counter;
+        img.src = '/static/assets/' + e; c.appendChild(img); }); }
+      else { }
+
+
+    }
 
     function s(id) { document.getElementById(id).focus(); }
 
@@ -338,14 +357,13 @@ Let’s explore it together - I’m waiting for you!
          and very authentic Polish food. You definitely want to come hungry as there is plenty of food! We were lucky to have a private tour on a rainy Sunday night
           and Adrian gave us such a great introduction to Warsaw and told us interesting facts about the city. His warm personality made the night go very fast!
            I highly recommend this tour in Warsaw and one of the best guides we've experienced!`]];
+
       let revs3 = [['The Perfect Traditional Tour', `We had a wonderful time with Adrian on our tour! The places he took us on the food tour were wonderful
        and very authentic Polish food. You definitely want to come hungry as there is plenty of food! We were lucky to have a private tour on a rainy Sunday
         night and Adrian gave us such a great introduction to Warsaw and told us interesting facts about the city. His warm personality made the night go very
          fast! I highly recommend this tour in Warsaw and one of the best guides we've experienced!`],
-        ['Delicious Polish Food and So Much More!', `We had a wonderful time with Adrian on our tour! The places he took us on the food tour were wonderful
-         and very authentic Polish food. You definitely want to come hungry as there is plenty of food! We were lucky to have a private tour on a rainy Sunday night
-          and Adrian gave us such a great introduction to Warsaw and told us interesting facts about the city. His warm personality made the night go very fast!
-           I highly recommend this tour in Warsaw and one of the best guides we've experienced!`]];
+        ['Do this tour !!', `We had a wonderful and delicious lunch/dinner! The food and company was phenomenal! We were also appreciative of the tips he shared with us.
+        It was a perfect end to our time in Warsaw.`]];
 
       revs1.forEach(e => {
         let item = document.createElement('div'); item.className = 'rev';
@@ -400,6 +418,7 @@ Let’s explore it together - I’m waiting for you!
     window.addEventListener('resize', updateCarousel);
     updateCarousel();
     revs();
+
   </script>
 
 </body>

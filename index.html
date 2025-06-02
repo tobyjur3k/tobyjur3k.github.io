@@ -51,7 +51,9 @@
     .navbar button:hover { border: 3px solid lightgrey; color: lightgrey; }
     .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; }
     .navbar-center { flex: 1; justify-content: center; display: flex; }
+    .s1-m { }
     .s1-m-text { display: none; }
+    .s1-m-title { display: none; }
     .s1-m-logo { height: 70px; cursor: pointer; }
     .section-divider { height: 10dvh; }
     .carousel { position: relative; overflow: hidden; height: 90dvh; margin: 0 auto; max-height: 100dvh; bottom: 0; }
@@ -64,10 +66,12 @@
     .dot { width: 12px; height: 12px; background: white; border-radius: 50%; opacity: 0.5; cursor: pointer; }
     .dot.active { opacity: 1; }
 
-    .rev { display: flex; background: white; flex-direction: column; padding: 1rem; text-align: start; width: 600px; height: auto; gap: 0.5rem; border-radius: 2rem; }
+    .section2 { height: 100%; width: 100%; display: flex; padding: 2rem; }
 
-    .section2-max-w-600 { max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; position: relative; overflow: hidden; }
-    .section2-max-w-600 img { padding: 1rem; }
+
+    .rev { display: flex; background: white; flex-direction: column; padding: 1rem; text-align: start; width: 600px; height: auto; gap: 0.5rem; border-radius: 2rem; }
+    .section2-max-w-600 { display: none; }
+
     .section4-max-w-600 { max-height: 100dvh; height: 100dvh; position: relative; overflow: hidden; justify-content: flex-start; flex-direction: column; justify-content: space-between; }
     .section4-max-w-600 img { padding: 1rem; max-height: 80dvh; height: 80dvh; max-width: 100dvw; width: 100dvw; object-fit: cover; flex-shrink: 0; z-index: 1; bottom: 0; position: absolute; }
     .section4-max-w-600 p {  }
@@ -96,13 +100,17 @@
 
       .section { max-height: 100dvh; height: 100dvh; }
 
-      .s1-m-e { background: white; align-items: end; display: flex; justify-content: center; text-align: center; height: 95dvh; flex-direction: column; align-items: center; }
+      .s1-m { background: white; justify-content: space-evenly; display: flex; height: 95dvh; flex-direction: column; }
       .s1-m-text { display: block; color: #4169E1; padding: 0 1rem 1rem 1rem; font-family: 'Fredoka', sans-serif; font-weight: bold; text-align: justify; }
+      .s1-m-title { display: flex; flex-direction: column; justify-content: center; text-align: center; width: 100%; }
       .s1-m-logo {  height: 40px;  }
       .carousel { max-height: 100dvh; height: auto; }
       .carousel-btn { font-size: 1.5rem; }
       .carousel-text { display: none; }
       .carousel-track img { max-height: 50dvh; height: 50dvh; }
+
+      .section2-max-w-600 { max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; position: relative; overflow: hidden; }
+    .section2-max-w-600 img { padding: 1rem; }
 
     }
     @media (min-width: 601px)
@@ -129,15 +137,11 @@
   <section class="section-divider"></section>
   <section id="s1-m" tabindex="1" class="s1-m">
 <!--      <div style="padding: 0.5rem 1rem 1rem 1rem;"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.png" class="s1-m-logo"></div>-->
-      <div class="s1-m-text">
-          <span>
-              I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
-              through the city’s rich culinary traditions, hidden gems, and warm hospitality.
-              If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the
-              Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.
-              We can’t wait to share it with you. <b>Just Be My Guest!</b>
-          </span>
-        </div>
+    <div class="s1-m-title" style="">
+          <p>join <b>BeMyGuest</b></p>
+          <p>Your Authentic Food Experience in Poland</p>
+      </div>
+
       <div class="carousel">
           <div class="carousel-text" style="position: absolute; left: 8rem; top: 0rem; z-index: 4; background: blue; opacity: 65%;
            color: white; font-size: 1.5rem; height: auto;">
@@ -172,6 +176,15 @@
             </span>
           </div>
     </div>
+      <div class="s1-m-text">
+          <span>
+              I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
+              through the city’s rich culinary traditions, hidden gems, and warm hospitality.
+              If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the
+              Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.
+              We can’t wait to share it with you. <b>Just Be My Guest!</b>
+          </span>
+        </div>
   </section>
 
 
@@ -207,7 +220,7 @@
     <p>Kraków: Eat Like a Local - Polish Food Tour</p>
   </div>
 </section>
-  <section id="s3" tabindex="3" class="section section3" style="display: none;">
+  <section id="s3" tabindex="3" class="section section3">
     <div style="display: flex; height: 100%; justify-content: center; ">
 <!--      <div style="display: flex; gap: 2rem; padding: 3rem;">-->
 <!--          <img src="/static/assets/inne5.jpg" style="height: 100%;">-->

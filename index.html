@@ -45,13 +45,16 @@
     @media (max-width: 768px) {
 
     }
-    .navbar { display: flex; justify-content: center; min-height: 5dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 5dvh; }
-    .navbar-buttons { display: flex; width: 100%; align-items: center; justify-content: space-evenly; }
-    .navbar button { background: transparent; border: none; font-weight: bold; width: 50px; }
-    .navbar button:hover { background: lightgrey; }
-    .section1 {  }
-
-    .carousel { position: relative; overflow: hidden; height: 95dvh; margin: 0 auto; max-height: 100dvh; }
+    .navbar { display: flex; justify-content: center; min-height: 10dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 10dvh; }
+    .navbar-buttons { display: flex; width: 100%; align-items: center; justify-content: space-between; }
+    .navbar button { background: #4169E1; color: white; border: none; border-radius: 3rem; padding: 10px; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1.5rem;  }
+    .navbar button:hover { border: 3px solid lightgrey; color: lightgrey; }
+    .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; }
+    .navbar-center { flex: 1; justify-content: center; display: flex; }
+    .s1-m-text { display: none; }
+    .s1-m-logo { height: 70px; cursor: pointer; }
+    .section-divider { height: 10dvh; }
+    .carousel { position: relative; overflow: hidden; height: 90dvh; margin: 0 auto; max-height: 100dvh; bottom: 0; }
     .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
     .carousel-track img { height: 100%; width: 100%; object-fit: cover; flex-shrink: 0; }
     .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 2rem; padding: 0.5rem 1rem; cursor: pointer; z-index: 2; }
@@ -87,16 +90,15 @@
       .section5-max-w-600 { display: block; max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; background: green; }
 
       .navbar { display: flex; justify-content: center; min-height: 5dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 5dvh; }
-
-      .navbar-buttons { gap: 0; margin-right: 0; font-family: 'Fredoka', sans-serif; }
-      .navbar button { padding: 0; font-size: 10px; color: #4169E1; font-weight: bold; }
+      .section-divider { height: 5dvh; }
+      .navbar-buttons { }
+      .navbar button { font-size: 0.5rem; background: transparent; color: #4169E1; border: none;}
 
       .section { max-height: 100dvh; height: 100dvh; }
 
-      .s1-m { background: white;
-        align-items: end; display: flex; justify-content: center; text-align: center; height: 95dvh; flex-direction: column; align-items: center; justify-content: space-between; }
+      .s1-m-e { background: white; align-items: end; display: flex; justify-content: center; text-align: center; height: 95dvh; flex-direction: column; align-items: center; }
       .s1-m-text { display: block; color: #4169E1; padding: 0 1rem 1rem 1rem; font-family: 'Fredoka', sans-serif; font-weight: bold; text-align: justify; }
-      .s1-m-logo {  height: 100%; width: 100%; }
+      .s1-m-logo {  height: 40px;  }
       .carousel { max-height: 100dvh; height: auto; }
       .carousel-btn { font-size: 1.5rem; }
       .carousel-text { display: none; }
@@ -113,30 +115,29 @@
 <body>
   <nav class="navbar">
     <div style="display: flex; justify-content: space-between; width: 95%;">
-
       <div class="navbar-buttons">
-        <div><button onclick="s('s2');">FOOD TOURS</button></div>
-        <div><button onclick="s('s3');">EVENTS & PRIVATE TOURS</button></div>
-        <div><button onclick="s('s4');">ABOUT ME</button></div>
-        <div><button onclick="s('s5');">MY REVIEWS</button></div>
+        <div class="navbar-left"><button onclick="s('s2');">FOOD TOURS</button><button onclick="s('s3');">EVENTS & PRIVATE TOURS</button></div>
+        <div class="navbar-center"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.png" class="s1-m-logo"></div>
+        <div class="navbar-right"><button onclick="s('s4');">ABOUT ME</button>
+            <button onclick="s('s5');">MY REVIEWS</button></div>
       </div>
 <!--      <div class="navbar-buttons-w600">-->
 <!--        <button>:</button>-->
 <!--      </div>-->
     </div>
   </nav>
-  <section style="height: 5dvh;"></section>
+  <section class="section-divider"></section>
   <section id="s1-m" tabindex="1" class="s1-m">
 <!--      <div style="padding: 0.5rem 1rem 1rem 1rem;"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.png" class="s1-m-logo"></div>-->
-<!--      <div class="s1-m-text">-->
-<!--          <span>-->
-<!--              I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey-->
-<!--              through the city’s rich culinary traditions, hidden gems, and warm hospitality.-->
-<!--              If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the-->
-<!--              Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.-->
-<!--              We can’t wait to share it with you. <b>Just Be My Guest!</b>-->
-<!--          </span>-->
-<!--        </div>-->
+      <div class="s1-m-text">
+          <span>
+              I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
+              through the city’s rich culinary traditions, hidden gems, and warm hospitality.
+              If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the
+              Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.
+              We can’t wait to share it with you. <b>Just Be My Guest!</b>
+          </span>
+        </div>
       <div class="carousel">
           <div class="carousel-text" style="position: absolute; left: 8rem; top: 0rem; z-index: 4; background: blue; opacity: 65%;
            color: white; font-size: 1.5rem; height: auto;">

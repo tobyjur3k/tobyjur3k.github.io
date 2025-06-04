@@ -76,20 +76,20 @@
 
         .section2-max-w-600 { display: none; }
 
-        .section4-max-w-600 { max-height: 100dvh; height: 100dvh; position: relative; overflow: hidden; justify-content: flex-start; flex-direction: column; justify-content: space-between; }
-        .section4-max-w-600 img { padding: 1rem; max-height: 80dvh; height: 80dvh; max-width: 100dvw; width: 100dvw; object-fit: cover; flex-shrink: 0; z-index: 1; bottom: 0; position: absolute; }
-        .section4-max-w-600 p {  }
+        .s4-m = { display: none; }
         .section5-max-w-600 { display: none; }
         .section5 { height: 90vh; background: darkgreen; flex-direction: column; padding: 5rem; }
 
-        .footer { width: 100%; height: 90dvh; display: flex; flex-direction: column; justify-content: space-between; align-items: center; align-content: center; text-align: center; }
-
+        .socials { display: flex; gap: 2rem; justify-content: center; font-size: 3rem; }
+        .footer { width: 100dvw; height: 90dvh; max-height: 90dvh; display: flex; flex-direction: column; justify-content: space-between; align-items: center; align-content: center; text-align: center;}
+        .footer-logo { height: 40dvh; width: auto; }
+        .footer-details { font-size: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem; }
         /* Optional for small screens */
         @media (max-width: 600px) {
 
           .p-aboutme { display: none; }
-          .s3-m { height: 90dvh; width: 100dvw; display: flex; flex-direction: column; padding: 1rem; gap: 1rem; text-align: center; align-content: center; align-items: center; }
-
+          .s3-m { height: 90dvh; width: 100dvw; display: flex; flex-direction: column; padding: 1rem; gap: 1rem; text-align: center; align-content: center; align-items: center; border: 1px solid black; }
+          .s4-m { height: 90dvh; width: 100dvw; display: flex; flex-direction: column; padding: 1rem; gap: 1rem; text-align: center; align-content: center; align-items: center; border: 1px solid black; }
           .socials-img { width: 100px; height: 100px; }
           .section5-max-w-600 { display: block; max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; background: green; }
 
@@ -112,7 +112,9 @@
           .carousel-btn { font-size: 1.5rem; }
           .carousel-text { display: none; }
           .carousel-track img { max-height: 50dvh; height: 50dvh; }
-
+            .footer { } .socials { font-size: 3rem; }
+            .footer-logo { height: 40%; width: 95dvw; }
+            .footer-details { font-size: 1rem; }
 
         }
         @media (min-width: 601px)
@@ -188,7 +190,6 @@
               </span>
             </div>
       </section>
-
 
       <section id="s2" tabindex="2" class="section section2">
           <div style="display: flex; align-content: center; align-items: center; "><img src="/static/assets/photo3.jpeg" style="height: 85vh; object-fit: cover; flex-shrink: 0;"></div>
@@ -269,15 +270,18 @@
           </div>
                   <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/photo2.jpeg" style="height: 90%;"></div>
       </section>
-      <section id="s4w600" class="section4-max-w-600" style="display: none;">
-        <div style="padding: 1rem 3rem 0 3rem; position: absolute; z-index: 2;">
-          <p style="text-align: center; font-size: 3rem; font-weight: bold; background: transparent;">ABOUT ME</p>
-          <p style="margin: 1.5rem 1rem 0 1rem; background: white;">I’m a local food tour guide, born and raised in the Polish countryside, where great food and
+
+      <section id="s4m" class="section s4-m">
+
+          <p style=" font-weight: bold; font-size: 2rem;">ABOUT ME</p>
+          <p style="align-text: justify; text-wrap: wrap;">I’m a local food tour guide, born and raised in the Polish countryside, where great food and
             stories were always around me. With years of experience in hospitality, a degree from the
             Agricultural University, and even a stint as a folk dancer, I’m all about sharing the real taste
-            and culture of Poland. Let’s explore it together – Just BeMyGuest!
-            I’m waiting for you – Just BeMyGuest!</p></div>
-        <img src="/static/assets/photo2.jpeg" style="border: 1px solid black;">
+            and culture of Poland. Let’s explore it together – Just BeMyGuest! <br> <br>
+            I’m waiting for you – Just BeMyGuest!</p>
+          <img src="/static/assets/photo2.jpeg" style="width: 100%;">
+
+
       </section>
       <section id="s5" tabindex="5" class="section section5">
         <div style="display: flex; justify-content: space-between; flex-direction: column; gap: 1rem; height: 100%;">
@@ -306,7 +310,7 @@
           <div id="revs3" style="display: flex; overflow: auto; justify-content: space-evenly;"></div>
         </div>
       </section>
-      <section id="s5w600" class="section5-max-w-600" style="display: none;">
+      <section id="s5w600" class="section5-max-w-600">
         <div style="display: flex; flex-direction: column; text-align: center; align-items: center; gap: 1rem; overflow: hidden; ">
           <p style="color: white; font-size: 3.5rem; font-weight: bold;">MY REVIEWS</p>
           <div class="rev" style="width: 80%;">
@@ -348,19 +352,19 @@
         </div>
       </section>
       <section id="footer" class="section footer">
-          <div style="margin-top: 2rem; justify-content: space-between; align-items: center; display: flex; flex-direction: column; height: 100%; margin-bottom: 4rem;">
-              <img src="/static/assets/logo_napis_bez_tla2.png" style="height: 40%; width: auto;">
-              <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-content: center; align-items: center; ">
-                  <span style="font-weight: bold; font-size: 2rem; ">FIND ME</span>
+          <div style=" justify-content: center; align-items: center; display: flex; flex-direction: column; height: 100%; gap: 3rem;">
+              <img src="/static/assets/logo_napis_bez_tla2.png" class="footer-logo">
+              <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-content: center; align-items: center;">
+                  <span style="font-weight: bold; font-size: 2rem;">FIND ME</span>
                   <a href="https://youtube.com" target="_blank"><img src="/static/assets/trip2.png"></a>
-                <div class="socials" style="display: flex; gap: 2rem; justify-content: center; font-size: 3rem;">
+                <div class="socials">
                   <a href="https://facebook.com" target="_blank" style="color: darkgreen;"><i class="fa-brands fa-square-facebook"></i></a>
                   <a href="https://instagram.com" target="_blank" style="color: darkgreen;"><i class="fa-brands fa-square-instagram"></i></a>
                   <a href="https://youtube.com" target="_blank" style="color: darkgreen;"><i class="fa-brands fa-youtube"></i></a>
                 </div>
               </div>
           </div>
-          <div style="font-size: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div class="footer-details">
             <span>
               <b>Be My Guest Adrian Cwiklinski</b> | Tax number: 6821749133 | Polish Business Registry <br>
               Number: 540103360 | Registered in Poland

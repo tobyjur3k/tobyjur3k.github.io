@@ -47,8 +47,8 @@
         }
         .navbar { display: flex; justify-content: center; min-height: 10dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 10dvh; border-bottom: 2px solid black; }
         .navbar-buttons { display: flex; width: 100%; align-items: center; justify-content: space-between; }
-        .navbar button { background: #4169E1; color: white; border: none; border-radius: 3rem; padding: 10px; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1.5rem;  }
-        .navbar button:hover { border: 3px solid lightgrey; color: lightgrey; }
+        .navbar button { background: blue; color: white; border: none; border-radius: 3rem; padding: 10px; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1.5rem;  }
+
         .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; }
         .navbar-center { flex: 1; justify-content: center; display: flex; }
         .s1-m { }
@@ -59,6 +59,7 @@
         .carousel { position: relative; overflow: hidden; height: 90dvh; margin: 0 auto; max-height: 100dvh; bottom: 0; }
         .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
         .carousel-track img { height: 100%; width: 100%; object-fit: cover; flex-shrink: 0; }
+
         .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 2rem; padding: 0.5rem 1rem; cursor: pointer; z-index: 2; }
         .carousel-btn.prev { left: 10px; }
         .carousel-btn.next { right: 10px; }
@@ -66,7 +67,8 @@
         .dot { width: 12px; height: 12px; background: white; border-radius: 50%; opacity: 0.5; cursor: pointer; }
         .dot.active { opacity: 1; }
 
-        .section2 { height: 90%; width: 100%; display: flex; padding: 2rem; background: grey; }
+        .section2 { height: 90%; width: 100%; display: flex; padding: 2rem; background: lightgrey; }
+        .section2 a { margin-left: 1rem; font-size: 1.75rem; font-family: 'Fredoka', sans-serif; text-decoration: none; color: white; background: blue; padding: 1.5rem; border-radius: 3rem; }
         .section2-m { display: none; }
         .s3-m { display: none; }
         .section3 { height: 90vh; width: 100%; display: flex; align-content: center; justify-content: space-between; padding: 2rem; align-items: center; }
@@ -115,10 +117,8 @@
             .footer { width: 100dvw; } .socials { font-size: 3rem; }
             .footer-logo { height: 40%; width: 95dvw; }
             .footer-details { font-size: 1rem; }
-
-        }
         @media (min-width: 601px)
-          { .section2-max-w-600 { display: none !important; } .section4-max-w-600 { display: none !important; }}
+          { .navbar button:hover { border: 3px solid lightgrey; color: lightgrey; }}
         @media (max-width: 1024px) {
              .section4 { display: none; } .section5 { display: none; }
         }
@@ -128,18 +128,15 @@
       <nav class="navbar">
         <div style="display: flex; justify-content: space-between; width: 95%;">
           <div class="navbar-buttons">
-            <div class="navbar-left"><button onclick="s('s2');">FOOD TOURS</button><button onclick="s('s3');">EVENTS & PRIVATE TOURS</button></div>
+            <div class="navbar-left"><button onclick="s('s2', 's2m');">FOOD TOURS</button><button onclick="s('s3', 's3m');">EVENTS & PRIVATE TOURS</button></div>
             <div class="navbar-center"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.PNG" class="s1-m-logo"></div>
-            <div class="navbar-right"><button onclick="s('s4');">ABOUT ME</button>
-                <button onclick="s('s5');">MY REVIEWS</button></div>
+            <div class="navbar-right"><button onclick="s('s4', 's4m');">ABOUT ME</button>
+                <button onclick="s('s5', 's5m');">MY REVIEWS</button></div>
           </div>
-    <!--      <div class="navbar-buttons-w600">-->
-    <!--        <button>:</button>-->
-    <!--      </div>-->
         </div>
       </nav>
       <section class="section-divider"></section>
-      <section id="s1-m" tabindex="1" class="s1-m" >
+      <section id="s1" tabindex="1" class="s1-m" >
     <!--      <div style="padding: 0.5rem 1rem 1rem 1rem;"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.png" class="s1-m-logo"></div>-->
         <div class="s1-m-title" style="">
               <p>join <b>BeMyGuest</b></p>
@@ -195,23 +192,23 @@
       <section id="s2" tabindex="2" class="section section2">
           <div style="display: flex; align-content: center; align-items: center; "><img src="/static/assets/photo3.jpeg" style="height: 85vh; object-fit: cover; flex-shrink: 0;"></div>
           <div style="display: flex; flex-direction: column; justify-content: space-evenly; align-content: center; align-items: center; margin: 0 3rem 0 3rem;">
-            <div class="s2-e" style="align-items: start; display: flex; flex-direction: column;"><a style="margin-left: 1rem;"
+            <div class="s2-e" style="align-items: start; display: flex; flex-direction: column; gap: 0.5rem;"><a
                     href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1">
               <strong>Warsaw Traditional Food Tour with Adrian</strong>
             </a><br>
             <span style="padding: 0 3rem 3rem 3rem;">I’ll personally take you on a journey through the city’s rich culinary traditions, hidden gems, and warm hospitality</span>
             </div>
-            <div ><p style="font-size: 3rem; font-weight: bold;">FOOD TOURS</p></div>
+            <div ><p style="font-size: 5rem; font-weight: bold; font-family: 'Fredoka', sans-serif; color: white;">FOOD TOURS</p></div>
             <div class="s2-e" style="align-items: end; display: flex; flex-direction: column;">
-              <a style="margin-right: 1rem;" href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
-              <strong>Krakow: Eat Like a Local - Polish Food Tour</strong></a><br>
             <span style="padding: 0 3rem 3rem 3rem;">If you're planning a trip to Cracow, don’t miss my delicious food tour through the Podgórze and Kazimierz districts, led by my amazing team of
-              passionate local guides.</span></div>
+              passionate local guides.</span><br>
+            <a style="margin-right: 1rem; font-size: 1.75rem; font-family: 'Fredoka', sans-serif;" href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
+              <strong>Krakow: Eat Like a Local - Polish Food Tour</strong></a></div>
           </div>
           <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo4.jpeg" style="height: 85vh; object-fit: cover; flex-shrink: 0;"></div>
       </section>
 
-      <section id="s2m" class="section2-m" style="width: 100dvw; background: grey;">
+      <section id="s2m" tabindex="6" class="section2-m" style="width: 100dvw; background: grey;">
           <div style="padding: 1rem; display: flex; flex-direction: column;  justify-content: space-between; align-items: center;">
               <img src="/static/assets/photo3.jpeg" style="width: 100%; height: 100%;">
               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 1rem; gap: 1rem;"><a
@@ -233,7 +230,7 @@
 
       </section>
 
-      <section id="s3m" tabindex="3" class="section s3-m">
+      <section id="s3m" tabindex="7"  class="section s3-m">
 
 
           <p style=" font-weight: bold; font-size: 2rem;">EVENTS & PRIVATE TOURS</p>
@@ -247,10 +244,10 @@
 
       </section>
 
-      <section id="s3" class="section section3">
+      <section id="s3" tabindex="3" class="section section3">
         <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/inne5.jpg" style="height: 90%;"></div>
           <div style="display: flex; flex-direction: column; align-content: center; text-align: center; justify-content: space-evenly; padding: 10rem;">
-              <p style=" font-weight: bold; font-size: 4rem;">EVENTS & PRIVATE TOURS</p>
+              <p style=" font-weight: bold; font-size: 4rem; font-family: 'Fredoka', sans-serif;">EVENTS & PRIVATE TOURS</p>
                   <p style="align-text: justify; ">
               Want to turn your business trip or group travel into something truly unforgettable?
               Just contact me – I’ll take care of everything to make your group’s experience truly special!
@@ -261,8 +258,8 @@
       </section>
 
       <section id="s4" tabindex="4" class="section section4">
-          <div style="display: flex; flex-direction: column; align-content: center; text-align: center; justify-content: space-evenly; padding: 10rem;">
-            <p style="font-size: 4rem; font-weight: bold;">ABOUT ME</p>
+          <div style="display: flex; flex-direction: column; align-content: center; text-align: center; justify-content: space-evenly; padding: 10rem; background: blue; height: 100%;">
+            <p style="font-size: 4rem; font-weight: bold; font-family: 'Fredoka', sans-serif;">ABOUT ME</p>
             <p style="align-text: justify; text-wrap: wrap;">I’m a local food tour guide, born and raised in the Polish countryside, where great food and stories were always around me.
                 With years of experience in hospitality, a degree from the Agricultural University, and even a stint as a folk dancer,
                 I’m all about sharing the real taste and culture of Poland.
@@ -272,9 +269,9 @@
                   <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/photo2.jpeg" style="height: 90%;"></div>
       </section>
 
-      <section id="s4m" class="section s4-m">
+      <section id="s4m" tabindex="8" class="section s4-m">
 
-          <p style=" font-weight: bold; font-size: 2rem;">ABOUT ME</p>
+          <p style=" font-weight: bold; font-size: 2rem; font-family: 'Fredoka', sans-serif;">ABOUT ME</p>
           <p style="align-text: justify; text-wrap: wrap;">I’m a local food tour guide, born and raised in the Polish countryside, where great food and
             stories were always around me. With years of experience in hospitality, a degree from the
             Agricultural University, and even a stint as a folk dancer, I’m all about sharing the real taste
@@ -297,21 +294,20 @@
               <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
              He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
             </div>
-            <p style="color: white; font-size: 5rem; font-weight: bold;">MY REVIEWS</p>
+            <p style="color: white; font-size: 5rem; font-weight: bold; font-family: 'Fredoka', sans-serif;">MY REVIEWS</p>
             <div class="rev" style="width: 500px;">
               <div style="color: green;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <div><strong>Super fun, insightful, and tasty tour!</strong></div>
+              <div><strong>Do this tour !!</strong></div>
               <div></div>
-              <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
-             He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
+              <div>We had a wonderful and delicious lunch/dinner! The food and company was phenomenal! We were also appreciative of the tips he shared with us. It was a perfect end to our time in Warsaw.</div>
             </div>
           </div>
           <div id="revs3" style="display: flex; overflow: auto; justify-content: space-evenly;"></div>
         </div>
       </section>
-      <section id="s5w600" class="section5-max-w-600">
+      <section id="s5m" tabindex="9" class="section5-max-w-600">
         <div style="display: flex; flex-direction: column; text-align: center; align-items: center; gap: 1rem; overflow: hidden; ">
           <p style="color: white; font-size: 3.5rem; font-weight: bold;">MY REVIEWS</p>
           <div class="rev" style="width: 80%;">
@@ -356,7 +352,7 @@
           <div style=" justify-content: center; align-items: center; display: flex; flex-direction: column; height: 100%; gap: 3rem;">
               <img src="/static/assets/logo_napis_bez_tla2.png" class="footer-logo">
               <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-content: center; align-items: center;">
-                  <span style="font-weight: bold; font-size: 2rem;">FIND ME</span>
+                  <span style="font-weight: bold; font-size: 2rem; font-family: 'Fredoka', sans-serif;">FIND ME</span>
                   <a href="https://youtube.com" target="_blank"><img src="/static/assets/trip2.PNG"></a>
                 <div class="socials">
                   <a href="https://facebook.com" target="_blank" style="color: darkgreen;"><i class="fa-brands fa-square-facebook"></i></a>
@@ -398,8 +394,17 @@
 
         }
 
-        function s(id) { document.getElementById(id).focus(); }
-
+        function s(id, id2) {
+            let d1 = document.getElementById(id); let d2 = document.getElementById(id2);
+            if (d1 && isVisible(d1)) {
+                d1.focus();
+            } else if (d2 && isVisible(d2)) {
+                d2.focus();
+            }
+        }
+        function isVisible(el) {
+    return el.offsetParent !== null || window.getComputedStyle(el).display !== 'none';
+}
         function revs() {
           let revs1 = [
             ['Super fun, insightful, and tasty tour!', `I did this tour my first night in Warsaw and it was the best way to start my trip.

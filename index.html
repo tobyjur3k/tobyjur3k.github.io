@@ -129,7 +129,7 @@
         <div style="display: flex; justify-content: space-between; width: 95%;">
           <div class="navbar-buttons">
             <div class="navbar-left"><button onclick="s('s2');">FOOD TOURS</button><button onclick="s('s3');">EVENTS & PRIVATE TOURS</button></div>
-            <div class="navbar-center"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.png" class="s1-m-logo"></div>
+            <div class="navbar-center"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.PNG" class="s1-m-logo"></div>
             <div class="navbar-right"><button onclick="s('s4');">ABOUT ME</button>
                 <button onclick="s('s5');">MY REVIEWS</button></div>
           </div>
@@ -168,6 +168,7 @@
                 <span data-index="2" class="dot"></span>
                 <span data-index="3" class="dot"></span>
                 <span data-index="4" class="dot"></span>
+                  <span data-index="5" class="dot"></span>
               </div>
               <div class="carousel-text" style="position: absolute; right: 2rem; bottom: 0; z-index: 4; border: 1px solid black; width: 40%; background: blue; opacity: 60%;
                color: white; font-size: 1.5rem;">
@@ -356,7 +357,7 @@
               <img src="/static/assets/logo_napis_bez_tla2.png" class="footer-logo">
               <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-content: center; align-items: center;">
                   <span style="font-weight: bold; font-size: 2rem;">FIND ME</span>
-                  <a href="https://youtube.com" target="_blank"><img src="/static/assets/trip2.png"></a>
+                  <a href="https://youtube.com" target="_blank"><img src="/static/assets/trip2.PNG"></a>
                 <div class="socials">
                   <a href="https://facebook.com" target="_blank" style="color: darkgreen;"><i class="fa-brands fa-square-facebook"></i></a>
                   <a href="https://instagram.com" target="_blank" style="color: darkgreen;"><i class="fa-brands fa-square-instagram"></i></a>
@@ -387,7 +388,7 @@
         function f1() {
           // funkcja uzupełnia panel zdjęciami
 
-          const p = ['Photo1.jpeg', 'inne1.jpeg'];
+          const p = ['photo1.jpeg', 'inne1.jpeg', 'inne2.jpg', 'aboutme2.jpeg', 'inne4.jpg', 'new4.jpeg'];
           let debug = true;
           const c = document.getElementById('c-track');
           if (debug) { p.forEach((e, counter) => { let img = document.createElement('img'); img.alt = 'Slide ' + counter;

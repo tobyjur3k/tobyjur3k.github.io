@@ -67,12 +67,12 @@
         .dot { width: 12px; height: 12px; background: white; border-radius: 50%; opacity: 0.5; cursor: pointer; }
         .dot.active { opacity: 1; }
 
-        .section2 { height: 90%; width: 100%; display: flex; padding: 2rem; background: lightgrey; }
+        .section2 { height: 90%; width: 100%; display: flex; padding: 2rem; }
         .section2 a { margin-left: 1rem; font-size: 1.75rem; font-family: 'Fredoka', sans-serif; text-decoration: none; color: white; background: blue; padding: 1.5rem; border-radius: 3rem; }
         .section2-m { display: none; }
         .s3-m { display: none; }
         .section3 { height: 90vh; width: 100%; display: flex; align-content: center; justify-content: space-between; padding: 2rem; align-items: center; }
-        .section4 { height: 90vh; width: 100%; display: flex; align-content: center; justify-content: space-between; padding: 2rem; align-items: center; background: grey; }
+        .section4 { height: 90vh; width: 100%; display: flex; align-content: center; justify-content: space-between; padding: 2rem; align-items: center;  }
 
         .rev { display: flex; background: white; flex-direction: column; padding: 1rem; text-align: start; width: 600px; height: auto; gap: 0.5rem; border-radius: 2rem; }
 
@@ -80,7 +80,7 @@
 
         .s4-m { display: none; }
         .section5-max-w-600 { display: none; }
-        .section5 { height: 90vh; background: darkgreen; flex-direction: column; padding: 5rem; }
+        .section5 { height: 90vh; flex-direction: column; padding: 5rem; }
 
         .socials { display: flex; gap: 2rem; justify-content: center; font-size: 3rem; }
         .footer { max-width: 95dvw; width: 95dvw; height: 90dvh; max-height: 90dvh; display: flex; flex-direction: column; justify-content: space-between; align-items: center; align-content: center; text-align: center;}
@@ -90,10 +90,10 @@
         @media (max-width: 600px) {
 
           .p-aboutme { display: none; }
-          .s3-m { height: 90dvh; width: 100dvw; display: flex; flex-direction: column; padding: 1rem; gap: 1rem; text-align: center; align-content: center; align-items: center; border: 1px solid black; }
-          .s4-m { height: 90dvh; width: 100dvw; display: flex; flex-direction: column; padding: 1rem; gap: 1rem; text-align: center; align-content: center; align-items: center; border: 1px solid black; }
+          .s3-m { height: 90dvh; width: 100dvw; display: flex; flex-direction: column; padding: 1rem; gap: 1rem; text-align: center; align-content: center; align-items: center;  }
+          .s4-m { height: 90dvh; width: 100dvw; display: flex; flex-direction: column; padding: 1rem; gap: 1rem; text-align: center; align-content: center; align-items: center;  }
           .socials-img { width: 100px; height: 100px; }
-          .section5-max-w-600 { display: block; max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; background: green; }
+          .section5-max-w-600 { display: block; max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; }
 
           .navbar { display: flex; justify-content: center; min-height: 5dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 5dvh; }
           .section-divider { height: 5dvh; }
@@ -117,6 +117,7 @@
             .footer { width: 100dvw; } .socials { font-size: 3rem; }
             .footer-logo { height: 40%; width: 95dvw; }
             .footer-details { font-size: 1rem; }
+            .rev { font-size: 0.8rem; }
         @media (min-width: 601px)
           { .navbar button:hover { border: 3px solid lightgrey; color: lightgrey; }}
         @media (max-width: 1024px) {
@@ -138,7 +139,7 @@
       <section class="section-divider"></section>
       <section id="s1" tabindex="1" class="s1-m" >
     <!--      <div style="padding: 0.5rem 1rem 1rem 1rem;"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.png" class="s1-m-logo"></div>-->
-        <div class="s1-m-title" style="">
+        <div class="s1-m-title" style="color: blue; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1rem;">
               <p>join <b>BeMyGuest</b></p>
               <p>Your Authentic Food Experience in Poland</p>
           </div>
@@ -146,7 +147,7 @@
           <div class="carousel">
               <div class="carousel-text" style="position: absolute; left: 8rem; top: 0rem; z-index: 4; background: blue; opacity: 65%;
                color: white; font-size: 1.5rem; height: auto;">
-                <span class="bebas-neue-regular" style="font-size: 3.5rem; font-weight: bold;" >
+                <span  style="font-size: 3.5rem; font-weight: bold; font-family: 'Fredoka', sans-serif;" >
                   Join BeMyGuest - Your Authentic Food Experience in Poland
                 </span>
               </div>
@@ -198,7 +199,7 @@
             </a><br>
             <span style="padding: 0 3rem 3rem 3rem;">I’ll personally take you on a journey through the city’s rich culinary traditions, hidden gems, and warm hospitality</span>
             </div>
-            <div ><p style="font-size: 5rem; font-weight: bold; font-family: 'Fredoka', sans-serif; color: white;">FOOD TOURS</p></div>
+            <div ><p style="font-size: 5rem; font-weight: bold; font-family: 'Fredoka', sans-serif; color: black;">FOOD TOURS</p></div>
             <div class="s2-e" style="align-items: end; display: flex; flex-direction: column;">
             <span style="padding: 0 3rem 3rem 3rem;">If you're planning a trip to Cracow, don’t miss my delicious food tour through the Podgórze and Kazimierz districts, led by my amazing team of
               passionate local guides.</span><br>
@@ -208,7 +209,7 @@
           <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo4.jpeg" style="height: 85vh; object-fit: cover; flex-shrink: 0;"></div>
       </section>
 
-      <section id="s2m" tabindex="6" class="section2-m" style="width: 100dvw; background: grey;">
+      <section id="s2m" tabindex="6" class="section2-m" style="width: 100dvw;">
           <div style="padding: 1rem; display: flex; flex-direction: column;  justify-content: space-between; align-items: center;">
               <img src="/static/assets/photo3.jpeg" style="width: 100%; height: 100%;">
               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 1rem; gap: 1rem;"><a
@@ -217,7 +218,7 @@
             </a>
                 <span >I’ll personally take you on a journey through the city’s rich culinary traditions, hidden gems, and warm hospitality</span>
                 </div>
-              <p style="font-weight: bold; font-size: 2rem; padding: 3rem;">FOOD TOURS</p>
+              <p style="font-weight: bold; font-size: 2.0rem; padding: 3rem; font-family: 'Fredoka', sans-serif;">FOOD TOURS</p>
 
               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 1rem; gap: 1rem;">
                 <span >If you're planning a trip to Cracow, don’t miss my delicious food tour through the Podgórze and Kazimierz districts, led by my amazing team of
@@ -233,7 +234,7 @@
       <section id="s3m" tabindex="7"  class="section s3-m">
 
 
-          <p style=" font-weight: bold; font-size: 2rem;">EVENTS & PRIVATE TOURS</p>
+          <p style=" font-weight: bold; font-size: 2.5rem; font-family: 'Fredoka', sans-serif;">EVENTS & PRIVATE TOURS</p>
           <img src="/static/assets/inne5.jpg" style="width: 100%;">
           <span>Corporate Events & Private Food Tours
           Want to turn your business trip or group travel into something truly unforgettable?
@@ -246,7 +247,7 @@
 
       <section id="s3" tabindex="3" class="section section3">
         <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/inne5.jpg" style="height: 90%;"></div>
-          <div style="display: flex; flex-direction: column; align-content: center; text-align: center; justify-content: space-evenly; padding: 10rem;">
+          <div style="display: flex; flex-direction: column; align-content: center; text-align: center; height: 100%; justify-content: space-evenly; padding: 10rem;">
               <p style=" font-weight: bold; font-size: 4rem; font-family: 'Fredoka', sans-serif;">EVENTS & PRIVATE TOURS</p>
                   <p style="align-text: justify; ">
               Want to turn your business trip or group travel into something truly unforgettable?
@@ -258,7 +259,7 @@
       </section>
 
       <section id="s4" tabindex="4" class="section section4">
-          <div style="display: flex; flex-direction: column; align-content: center; text-align: center; justify-content: space-evenly; padding: 10rem; background: blue; height: 100%;">
+          <div style="display: flex; flex-direction: column; align-content: center; text-align: center; justify-content: space-evenly; padding: 10rem; height: 100%;">
             <p style="font-size: 4rem; font-weight: bold; font-family: 'Fredoka', sans-serif;">ABOUT ME</p>
             <p style="align-text: justify; text-wrap: wrap;">I’m a local food tour guide, born and raised in the Polish countryside, where great food and stories were always around me.
                 With years of experience in hospitality, a degree from the Agricultural University, and even a stint as a folk dancer,
@@ -271,7 +272,7 @@
 
       <section id="s4m" tabindex="8" class="section s4-m">
 
-          <p style=" font-weight: bold; font-size: 2rem; font-family: 'Fredoka', sans-serif;">ABOUT ME</p>
+          <p style=" font-weight: bold; font-size: 3.5rem; font-family: 'Fredoka', sans-serif;">ABOUT ME</p>
           <p style="align-text: justify; text-wrap: wrap;">I’m a local food tour guide, born and raised in the Polish countryside, where great food and
             stories were always around me. With years of experience in hospitality, a degree from the
             Agricultural University, and even a stint as a folk dancer, I’m all about sharing the real taste
@@ -286,7 +287,7 @@
           <div id="revs1" style="display: flex; overflow: auto; justify-content: space-evenly;"></div>
           <div id="revs2" style="display: flex; overflow: auto; justify-content: space-between; text-align: center; align-items: center;">
             <div class="rev" style="width: 500px;">
-              <div style="color: green;">
+              <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
               <div><strong>Super fun, insightful, and tasty tour!</strong></div>
@@ -294,9 +295,9 @@
               <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
              He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
             </div>
-            <p style="color: white; font-size: 5rem; font-weight: bold; font-family: 'Fredoka', sans-serif;">MY REVIEWS</p>
+            <p style="color: black; font-size: 5rem; font-weight: bold; font-family: 'Fredoka', sans-serif;">MY REVIEWS</p>
             <div class="rev" style="width: 500px;">
-              <div style="color: green;">
+              <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
               <div><strong>Do this tour !!</strong></div>
@@ -308,10 +309,10 @@
         </div>
       </section>
       <section id="s5m" tabindex="9" class="section5-max-w-600">
-        <div style="display: flex; flex-direction: column; text-align: center; align-items: center; gap: 1rem; overflow: hidden; ">
-          <p style="color: white; font-size: 3.5rem; font-weight: bold;">MY REVIEWS</p>
+        <div style="display: flex; flex-direction: column; text-align: center; align-items: center; gap: 1rem; overflow: hidden; justify-content: space-evenly; height: 100%;">
+          <p style="color: white; font-size: 3.5rem; font-weight: bold; font-family: 'Fredoka', sans-serif; color: black;">MY REVIEWS</p>
           <div class="rev" style="width: 80%;">
-              <div style="color: green;">
+              <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
               <div><strong>Super fun, insightful, and tasty tour!</strong></div>
@@ -320,7 +321,7 @@
              He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
             </div>
           <div class="rev" style="width: 80%;">
-              <div style="color: green;">
+              <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
               <div><strong>Super fun, insightful, and tasty tour!</strong></div>
@@ -329,7 +330,7 @@
              He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
             </div>
           <div class="rev" style="width: 80%;">
-              <div style="color: green;">
+              <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
               <div><strong>Super fun, insightful, and tasty tour!</strong></div>
@@ -337,15 +338,16 @@
               <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
              He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
             </div>
-    <!--      <div class="rev" style="width: 80%;">-->
-    <!--          <div style="color: green;">-->
-    <!--            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>-->
-    <!--          </div>-->
-    <!--          <div><strong>Super fun, insightful, and tasty tour!</strong></div>-->
-    <!--          <div></div>-->
-    <!--          <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.-->
-    <!--         He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>-->
-    <!--        </div>-->
+          <div class="rev" style="width: 80%;">
+              <div style="color: blue;">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <div><strong>Super fun, insightful, and tasty tour!</strong></div>
+              <div></div>
+              <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
+             He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
+            </div>
+
         </div>
       </section>
       <section id="footer" class="section footer">
@@ -425,7 +427,7 @@
           revs1.forEach(e => {
             let item = document.createElement('div'); item.className = 'rev';
             item.innerHTML = `
-              <div style="color: green;">
+              <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
               <div><strong>${e[0]}</strong></div>
@@ -437,7 +439,7 @@
           revs3.forEach(e => {
             let item = document.createElement('div'); item.className = 'rev';
             item.innerHTML = `
-              <div style="color: green;">
+              <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
               <div><strong>${e[0]}</strong></div>

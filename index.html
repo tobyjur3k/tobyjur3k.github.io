@@ -17,7 +17,7 @@
         }
 
         html, body {
-          font-family: Arial, sans-serif;
+          font-family: 'Fredoka', sans-serif;
           height: 100%;
           scroll-behavior: smooth;
         }
@@ -51,12 +51,12 @@
 
         .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; }
         .navbar-center { flex: 1; justify-content: center; display: flex; }
-        .s1-m { }
+        .s1-m { height: 90dvh; }
         .s1-m-text { display: none; }
         .s1-m-title { display: none; }
         .s1-m-logo { height: 70px; cursor: pointer; }
         .section-divider { height: 10dvh; }
-        .carousel { position: relative; overflow: hidden; height: 90dvh; margin: 0 auto; max-height: 100dvh; bottom: 0; }
+        .carousel { position: relative; overflow: hidden; height: 80dvh; margin: 0 auto; max-height: 100dvh; bottom: 0; }
         .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
         .carousel-track img { height: 100%; width: 100%; object-fit: cover; flex-shrink: 0; }
 
@@ -168,8 +168,8 @@
                 <span data-index="4" class="dot"></span>
                   <span data-index="5" class="dot"></span>
               </div>
-              <div class="carousel-text" style="position: absolute; right: 2rem; bottom: 0; z-index: 4; border: 1px solid black; width: 40%; background: blue; opacity: 60%;
-               color: white; font-size: 1.5rem;">
+                              <div class="carousel-text" style="z-index: 4; width: 100%; background: blue; opacity: 60%;
+               color: black; font-size: 1.5rem;">
                 <span style="text-wrap: wrap;">
                   I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
                   through the city’s rich culinary traditions, hidden gems, and warm hospitality.
@@ -386,7 +386,7 @@
         function f1() {
           // funkcja uzupełnia panel zdjęciami
 
-          const p = ['photo1.jpeg', 'inne1.jpeg', 'inne2.jpg', 'aboutme2.jpeg', 'inne4.jpg', 'new4.jpeg'];
+          const p = ['aboutme2.jpeg', 'photo1.jpeg', 'inne1.jpeg', 'inne2.jpg', 'inne4.jpg', 'new4.jpeg'];
           let debug = true;
           const c = document.getElementById('c-track');
           if (debug) { p.forEach((e, counter) => { let img = document.createElement('img'); img.alt = 'Slide ' + counter;

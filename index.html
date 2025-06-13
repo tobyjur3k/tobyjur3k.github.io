@@ -47,8 +47,8 @@
         }
         .navbar { display: flex; justify-content: center; min-height: 10dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 10dvh; border-bottom: 2px solid black; }
         .navbar-buttons { display: flex; width: 100%; align-items: center; justify-content: space-between; }
-        .navbar button { background: blue; color: white; border: none; border-radius: 3rem; padding: 10px; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1.5rem;  }
-
+        .navbar button { cursor: pointer; background: blue; color: white; border: none; border-radius: 3rem; padding: 10px; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1.5rem;  }
+        .navbar button:hover { border: 2px solid blue; background: transparent; color: blue; }
         .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; }
         .navbar-center { flex: 1; justify-content: center; display: flex; }
         .s1-m { height: 90dvh; }
@@ -56,7 +56,7 @@
         .s1-m-title { display: none; }
         .s1-m-logo { height: 70px; cursor: pointer; }
         .section-divider { height: 10dvh; }
-        .carousel { position: relative; overflow: hidden; height: 80dvh; margin: 0 auto; max-height: 100dvh; bottom: 0; }
+        .carousel { position: relative; overflow: hidden; height: 70dvh; margin: 0 auto; max-height: 100dvh; bottom: 0; width: 95dvw; }
         .carousel-text2 { height: 10dvh; z-index: 4; width: 100%; opacity: 60%; display: flex; text-align: center; justify-content: justify; align-items: center;
                color: black; font-size: 1.25rem;}
         .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
@@ -77,7 +77,7 @@
         .section4 { height: 90vh; width: 100%; display: flex; align-content: center; justify-content: space-between; padding: 2rem; align-items: center;  }
 
         .rev { display: flex; background: white; flex-direction: column; padding: 1rem; text-align: start; width: 600px; height: auto; gap: 0.5rem; border-radius: 2rem; }
-
+        .rev:hover { border: 2px solid blue; cursor: pointer; }
         .section2-max-w-600 { display: none; }
 
         .s4-m { display: none; }
@@ -85,7 +85,8 @@
         .section5 { height: 90vh; flex-direction: column; padding: 0 5rem 5rem 5rem; max-width: 99dvw; width: 99dvw; }
 
         .socials { display: flex; gap: 2rem; justify-content: center; font-size: 3rem; }
-        .footer { max-width: 99dvw; width: 99dvw; height: 45dvh; max-height: 45dvh; display: flex; flex-direction: column; justify-content: space-between; align-items: center; align-content: center; text-align: center;}
+        .footer { max-width: 99dvw; width: 99dvw; height: 55dvh; max-height: 55dvh; display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+        align-content: center; text-align: center;  }
         .footer-logo { height: 40dvh; width: auto; }
         .footer-details { font-size: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem; }
         /* Optional for small screens */
@@ -146,14 +147,13 @@
               <p>join <b>BeMyGuest</b></p>
               <p>Your Authentic Food Experience in Poland</p>
           </div>
-
-          <div class="carousel">
-              <div class="carousel-text" style="position: absolute; left: 8rem; top: 0rem; z-index: 4; background: blue; opacity: 65%;
-               color: white; font-size: 1.5rem; height: auto;">
-                <span  style="font-size: 3.5rem; font-weight: bold; font-family: 'Fredoka', sans-serif;" >
+            <div class="carousel-text2" style="justify-content: center;">
+                <b style="text-wrap: wrap; padding: 3rem;">
                   Join BeMyGuest - Your Authentic Food Experience in Poland
-                </span>
+                </b>
               </div>
+          <div class="carousel">
+
               <div id="c-track" class="carousel-track">
         <!--        <img src="/static/assets/photo1.jpeg" alt="Slide 1">-->
         <!--        <img src="/static/assets/inne1.jpeg" alt="Slide 2">-->
@@ -345,13 +345,16 @@
         </div>
       </section>
       <section id="footer" class="footer">
-          <span style="font-weight: bold; font-size: 2rem; font-family: 'Fredoka', sans-serif;">FIND ME</span>
-                  <a href="https://www.tripadvisor.com/Attraction_Review-g274856-d30826435-Reviews-Be_My_Guest_by_Adrian-Warsaw_Mazovia_Province_Central_Poland.html" target="_blank"><img src="/static/assets/trip2.PNG"></a>
+          <div style="display: flex; flex-direction: column;">
+              <span style="font-weight: bold; font-size: 2rem; font-family: 'Fredoka', sans-serif;">FIND ME</span>
+                  <a style="margin-top: 1rem;" href="https://www.tripadvisor.com/Attraction_Review-g274856-d30826435-Reviews-Be_My_Guest_by_Adrian-Warsaw_Mazovia_Province_Central_Poland.html" target="_blank">
+                      <img src="/static/assets/trip2.PNG"></a>
                 <div class="socials">
                   <a href="https://www.tiktok.com/@bemyguest_byadrian" target="_blank" style="color: black;"><i class="fa-brands fa-tiktok"></i></a>
                   <a href="https://www.instagram.com/just_bemyguest/" target="_blank" style="color: black;"><i class="fa-brands fa-square-instagram"></i></a>
                   <a href="https://www.youtube.com/channel/UCfLFX89-MARqNVa_uEep3bg" target="_blank" style="color: black;"><i class="fa-brands fa-youtube"></i></a>
                 </div>
+          </div>
           <div class="footer-details">
             <span>
               <b>Be My Guest Adrian Cwiklinski</b> | Tax number: 6821749133 | Polish Business Registry <br>
@@ -467,6 +470,7 @@
         window.addEventListener('resize', updateCarousel);
         updateCarousel();
         revs();
+
 
       </script>
 

@@ -49,13 +49,13 @@
         .navbar-buttons { display: flex; width: 100%; align-items: center; justify-content: space-between; }
         .navbar button { cursor: pointer; background: blue; color: white; border: none; border-radius: 3rem; padding: 10px; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1.5rem;  }
         .navbar button:hover { border: 2px solid blue; background: transparent; color: blue; }
-        .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; }
+        .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; align-items: center; }
         .navbar-center { flex: 1; justify-content: center; display: flex; }
         .section { max-width: 99dvw; width: 99dvw; max-height: 100dvh; height: 100dvh; padding: 0 8rem 0 8rem; }
         .s1-m { display: flex; flex-direction: column; font-size: 1.3rem; justify-content: space-evenly;  }
         .s1-m-text { display: none; }
         .s1-m-title { display: none; }
-        .s1-m-logo { height: 70px; cursor: pointer; }
+        .s1-m-logo { height: 50px; cursor: pointer; }
         .section-divider { height: 10dvh; }
         .carousel { position: relative; overflow: hidden; margin: 0 auto; max-height: 80dvh; height: auto; bottom: 0; max-width: 100%; width: auto; border-radius: 1rem; }
         .carousel-text2 {  opacity: 70%; display: flex; text-align: center; justify-content: justify; align-items: center; font-size: 2rem;
@@ -99,29 +99,35 @@
           .s3-m { height: 100dvh; width: 100dvw; display: flex; flex-direction: column; gap: 2rem; text-align: center; align-content: center; align-items: center; justify-content: center;  }
           .s4-m { height: 100dvh; width: 100dvw; display: flex; flex-direction: column; text-align: center; gap: 2rem; align-content: center; align-items: center; justify-content: center; }
           .socials-img { width: 100px; height: 100px; }
-          .section5-max-w-600 { display: block; max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; }
+          .section5-max-w-600 { display: block;  max-width: 100dvw; width: 100dvw; }
 
           .navbar { display: none; justify-content: center; min-height: 8dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 8dvh; }
-          .section-divider { height: 5dvh; }
+          .section-divider { height: 7dvh; }
           .navbar-buttons { }
           .navbar button { font-size: 10px; background: transparent; color: #4169E1; border: none; }
+          .navbar2 { display: flex; width: 100%; align-items: center; justify-content: space-between; z-index: 5; position: fixed; top: 0; background: white; height: 7dvh; border-bottom: 2px solid
+          blue;  }
+          .navbar2 button { display: flex; cursor: pointer; color: #4169E1; background: transparent; border: none; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 0.6rem;
+            width: 15%;}
 
+          .s1-m { max-height: 93dvh; height: 93dvh; }
           .section2 { display: none; }
           .section2-m { display: flex; }
           .section3 { display: none; }
           .section4 { display: none; }
-          .footer { height: 95dvh; width: 100dvw; }
+          .footer { height: 100dvh; }
           .section { padding: 0 1rem 0 1rem; }
 
-          .carousel { max-height: 90dvh; height: 75dvh; }
+          .carousel { max-height: 90dvh; height: auto; }
           .carousel-btn { display: none; }
-          .carousel-text2 { font-size: 1.1rem;   }
+          .carousel-text2 { font-size: 1.1rem; display: none;   }
           .carousel-text3 { font-size: 0.8rem;   }
           .carousel-track img {  }
-            .footer { width: 100dvw; } .socials { font-size: 3rem; }
+            .footer { width: 100dvw; max-height: 100dvh; height: auto; gap: 3rem; } .socials { font-size: 2rem; }
             .footer-logo { height: 40%; width: 95dvw; }
             .footer-details { font-size: 1rem; }
-            .rev { font-size: 0.8rem; }
+            .rev { font-size: 0.8rem; border: 1px solid blue; }
+            .rev:hover { border: none; }
         @media (min-width: 601px)
           { .navbar button:hover { border: 3px solid lightgrey; color: lightgrey; }}
         @media (max-width: 1024px) {
@@ -140,7 +146,12 @@
           </div>
         </div>
       </nav>
-<!--      <section class="section-divider"></section>-->
+      <nav class="navbar2">
+          <div class="navbar-left"><button onclick="s('s2', 's2m');">FOOD TOURS</button><button onclick="s('s3', 's3m');">EVENTS & PRIVATE TOURS</button></div>
+          <div class="navbar-center"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.PNG" style="height: 6dvh;"></div>
+          <div class="navbar-right"><button onclick="s('s4', 's4m');">ABOUT ME</button><button onclick="s('s5', 's5m');">MY REVIEWS</button></div>
+      </nav>
+      <section class="section-divider"></section>
       <section id="s1" tabindex="1" class="section s1-m" >
     <!--      <div style="padding: 0.5rem 1rem 1rem 1rem;"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.png" class="s1-m-logo"></div>-->
 
@@ -299,7 +310,6 @@
       </section>
       <section id="s5m" tabindex="9" class="section5-max-w-600">
         <div style="display: flex; flex-direction: column; text-align: center; align-items: center; gap: 1rem; overflow: hidden; justify-content: space-evenly; height: 100%;">
-          <p style="color: white; font-size: 3.5rem; font-weight: bold; font-family: 'Fredoka', sans-serif; color: black;">MY REVIEWS</p>
           <div class="rev" style="width: 80%;">
               <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -313,37 +323,43 @@
               <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <div><strong>Super fun, insightful, and tasty tour!</strong></div>
+              <div><strong>Delicious Polish Food and So Much More!</strong></div>
               <div></div>
-              <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
-             He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
+              <div>We had a wonderful time with Adrian on our tour! The places he took us on the food tour were wonderful
+             and very authentic Polish food. You definitely want to come hungry as there is plenty of food! We were lucky to have a private tour on a rainy Sunday night
+              and Adrian gave us such a great introduction to Warsaw and told us interesting facts about the city. His warm personality made the night go very fast!
+               I highly recommend this tour in Warsaw and one of the best guides we've experienced!</div>
+            </div>
+            <p style="color: white; font-size: 1.6rem; font-weight: bold; font-family: 'Fredoka', sans-serif; color: black; padding: 2rem;">MY REVIEWS</p>
+          <div class="rev" style="width: 80%;">
+              <div style="color: blue;">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <div><strong>The Perfect Traditional Tour</strong></div>
+              <div></div>
+              <div>We had a wonderful time with Adrian on our tour! The places he took us on the food tour were wonderful
+           and very authentic Polish food. You definitely want to come hungry as there is plenty of food! We were lucky to have a private tour on a rainy Sunday
+            night and Adrian gave us such a great introduction to Warsaw and told us interesting facts about the city. His warm personality made the night go very
+             fast! I highly recommend this tour in Warsaw and one of the best guides we've experienced!</div>
             </div>
           <div class="rev" style="width: 80%;">
               <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <div><strong>Super fun, insightful, and tasty tour!</strong></div>
+              <div><strong>Adrian is the Best!</strong></div>
               <div></div>
-              <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
-             He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
-            </div>
-          <div class="rev" style="width: 80%;">
-              <div style="color: blue;">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <div><strong>Super fun, insightful, and tasty tour!</strong></div>
-              <div></div>
-              <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
-             He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
+              <div>`Wow. What an awesome food tour we had with Adrian.. He is so personable and his knowledge about Polish cuisine can't be beat.
+            We had the best time with Adrian and cannot recommend him enough!</div>
             </div>
 
         </div>
       </section>
-      <section id="footer" class="footer">
-          <div style="display: flex; flex-direction: column;">
-              <span style="font-weight: bold; font-size: 2rem; font-family: 'Fredoka', sans-serif;">FIND ME</span>
-                  <a style="margin-top: 1rem;" href="https://www.tripadvisor.com/Attraction_Review-g274856-d30826435-Reviews-Be_My_Guest_by_Adrian-Warsaw_Mazovia_Province_Central_Poland.html" target="_blank">
-                      <img src="/static/assets/trip2.PNG"></a>
+      <section id="footer" class="section footer">
+          <div style="display: flex; flex-direction: column; margin-top: 2rem;">
+              <span style="font-weight: bold; font-size: 1.6rem; font-family: 'Fredoka', sans-serif;">FIND ME</span>
+                  <a style="margin-top: 1.5rem;" href="https://www.tripadvisor.com/Attraction_Review-g274856-d30826435-Reviews-Be_My_Guest_by_Adrian-Warsaw_Mazovia_Province_Central_Poland.html"
+                     target="_blank">
+                      <img src="/static/assets/trip2.PNG" style="height: 5rem;"></a>
                 <div class="socials">
                   <a href="https://www.tiktok.com/@bemyguest_byadrian" target="_blank" style="color: black;"><i class="fa-brands fa-tiktok"></i></a>
                   <a href="https://www.instagram.com/just_bemyguest/" target="_blank" style="color: black;"><i class="fa-brands fa-square-instagram"></i></a>
@@ -358,7 +374,6 @@
               <a style="font-size: 0.8rem;" href="https://youtube.com">Privacy policy</a>
             <p style="font-weight: bold;">&copy; 2025 Adrian Ćwikliński - All rights reserved</p>
           </div>
-
       </section>
 
       <script>

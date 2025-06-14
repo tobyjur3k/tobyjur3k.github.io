@@ -49,7 +49,8 @@
         .navbar2-p { width: 99dvw; max-width: 99dvw; display: flex; justify-content: center; z-index: 5; position: fixed; top: 1rem; height: 8dvh; padding: 0 5rem 0 5rem; }
         .navbar2 { height: 100%; width: 100%; display: flex; align-items: center; justify-content: space-between; background: rgba(65, 105, 225, 0.60); border: 2px solid #4169E1;
         border-radius: 2rem; }
-        .navbar2 button { display: flex; cursor: pointer; color: white; background: transparent; border-radius: 2rem; border: none; font-weight: bold;
+        .navbar-vip { display: flex; gap: 5px; }
+        .navbar2 button { display: flex; cursor: pointer; color: white; background: transparent; border-radius: 2rem; border: none;
         font-family: 'Fredoka', sans-serif; font-size: 1.25rem; align-items: center; justify-content: center; padding: 0.5rem 3rem 0.5rem 3rem; height: 90%; }
         .navbar2 button:hover { background: white; color: #274bb5; opacity: 1; }
         .navbar2-img { height: 6dvh; opacity: 90%; border-radius: 0; }
@@ -65,15 +66,15 @@
         .s1-m { display: flex;  }
         .carousel { position: relative; overflow: hidden; margin: 0 auto; max-height: 100dvh; height: auto; bottom: 0; max-width: 100dvw; width: 100dvw; }
         .carousel-panel { position: absolute; z-index: 3; bottom: 1rem; height: 15dvh; width: 100%; display: flex; align-content: center; justify-content: center; }
-        .carousel-text3 { padding: 0 5rem 0 5rem; background: rgba(65, 105, 225, 0.65); color: white; border-radius: 3rem; border: 2px solid #4169E1; width: 70%; display: flex;
-        flex-direction: column; align-content: center; align-items: center; justify-content: space-evenly; text-align: justify; }
+        .carousel-text3 { padding: 0 5rem 0 5rem; background: rgba(65, 105, 225, 0.85); color: white; border-radius: 3rem; border: 2px solid #4169E1; width: 70%; display: flex;
+        flex-direction: column; align-content: center; align-items: center; justify-content: space-evenly; text-align: center; }
         .carousel-m-title { display: none; }
         .carousel-span { text-justify: auto; padding: 0; opacity: 1; color: white; }
          .carousel-text2 {  position: absolute; top: 0; opacity: 85%; display: none; text-align: center; justify-content: justify; align-items: center; font-size: 1.6rem; color: black; }
          .carousel-text4 { display: none; }
         .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
         .carousel-track img { height: 100%; width: 100%; object-fit: cover; flex-shrink: 0; }
-        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(65, 105, 225, 0.40); color: white; font-size: 2rem; padding: 0.5rem 1rem;
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(65, 105, 225, 0.20); color: white; font-size: 2rem; padding: 0.5rem 1rem;
         cursor: pointer; z-index: 2; border: 2px solid #4169E1; border-radius: 1rem; }
         .carousel-btn:hover { background: rgba(65, 105, 225, 100); }
         .carousel-btn.prev { left: 10px; opacity: 60%;}
@@ -124,10 +125,11 @@
             img { border-radius: 2rem; }
           .section-divider { display: flex; height: 10dvh; }
           .navbar2-p { padding: 0; height: 10dvh; top: 0; max-width: 100dvw; width: 100dvw; }
-          .navbar2 { max-width: 100dvw; width: 100dvw;  border-radius: 0; }
+          .navbar2 { max-width: 100dvw; width: 100dvw; border-radius: 0; }
           .navbar2 button { font-size: 0.55rem; padding: 0; }
           .navbar2 button:hover { color: white; background: transparent; }
           .navbar2-img { height: 5dvh; }
+          .navbar-vip { display: flex; flex-direction: column; gap: 0; }
           .navbar-center { padding: 0 1rem 0 1rem; }
             .carousel-m-title { display: flex; text-align: center; justify-text: justify; }
             .section-title { font-size: 1.5rem; }
@@ -145,7 +147,7 @@
           .carousel-btn { display: none; }
           .carousel-text2 { display: none; }
           .carousel-text3 { height: 3dvh; width: 3dvw; }
-          .carousel-text4 { display: flex; text-align: justify; padding: 0 1rem 0 1rem; }
+          .carousel-text4 { display: flex; text-align: center; padding: 0 1rem 0 1rem; }
           .carousel-track img {  }
           .carousel-dots { opacity: 100%; display: flex; gap: 4px;  }
           .dot { width: 0.75rem; height: 0.75rem; }
@@ -164,9 +166,11 @@
     <body>
       <nav class="navbar2-p">
           <div class="navbar2">
-              <div class="navbar-left"><button onclick="s('s2', 's2m');">FOOD TOURS</button><button onclick="s('s3', 's3m');">EVENTS & PRIVATE TOURS</button></div>
+              <div class="navbar-left"><button class="navbar-vip" onclick="s('s2', 's2m');"><span>FOOD</span> <span>TOURS</span></button><button onclick="s('s3', 's3m');" class="navbar-vip">
+                  <span>EVENTS &</span> <span>PRIVATE TOURS</span></button></div>
               <div class="navbar-center" onclick="s('s1');"><img  src="/static/assets/logo_napis_bez_tla2.PNG" class="navbar2-img"></div>
-              <div class="navbar-right"><button onclick="s('s4', 's4m');">ABOUT ME</button><button onclick="s('s5', 's5m');">MY REVIEWS</button></div>
+              <div class="navbar-right"><button class="navbar-vip" onclick="s('s4', 's4m');"><span>ABOUT</span> <span>ME</span></button>
+                  <button class="navbar-vip" onclick="s('s5', 's5m');"><span>MY</span><span>REVIEWS</span></button></div>
           </div>
       </nav>
       <section class="section-divider"></section>
@@ -482,7 +486,7 @@ goToSlide(nextIndex);
 }
 revs();
 // Automatyczne przełączanie co sekundę
-setInterval(nextSlide, 2000);
+setInterval(nextSlide, 4000);
 
 // (Opcjonalnie) Obsługa kliknięcia kropek
 dots.forEach(dot => {

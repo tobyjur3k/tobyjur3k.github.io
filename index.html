@@ -23,21 +23,22 @@
         }
 
         body {
-          background-color: #f9f9f9;
+          background-color: white;
           color: #333;
         }
-    .bebas-neue-regular {
-      font-family: "Bebas Neue", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
 
-        .inter {
-      font-family: "Inter", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: bold;
-      font-style: normal;
-    }
+        .bebas-neue-regular {
+          font-family: "Bebas Neue", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+            .inter {
+          font-family: "Inter", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: bold;
+          font-style: normal;
+        }
         /* Desktop adjustments */
         @media (min-width: 768px) {
 
@@ -45,53 +46,71 @@
         @media (max-width: 768px) {
 
         }
-        .navbar { display: none; justify-content: center; min-height: 10dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 10dvh; border-bottom: 2px solid black; }
-        .navbar-buttons { display: flex; width: 100%; align-items: center; justify-content: space-between; }
-        .navbar button { cursor: pointer; background: blue; color: white; border: none; border-radius: 3rem; padding: 10px; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1.5rem;  }
-        .navbar button:hover { border: 2px solid blue; background: transparent; color: blue; }
-        .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; align-items: center; }
-        .navbar-center { flex: 1; justify-content: center; display: flex; }
-        .section { max-width: 99dvw; width: 99dvw; max-height: 100dvh; height: 100dvh; padding: 0 8rem 0 8rem; }
-        .s1-m { display: flex; flex-direction: column; font-size: 1.3rem; justify-content: space-evenly;  }
-        .s1-m-text { display: none; }
-        .s1-m-title { display: none; }
-        .s1-m-logo { height: 50px; cursor: pointer; }
-        .section-divider { height: 10dvh; }
-        .carousel { position: relative; overflow: hidden; margin: 0 auto; max-height: 80dvh; height: auto; bottom: 0; max-width: 100%; width: auto; border-radius: 1rem; }
-        .carousel-text2 {  opacity: 70%; display: flex; text-align: center; justify-content: justify; align-items: center; font-size: 2rem;
-           color: black; }
-        .carousel-text3 {   opacity: 70%; display: flex; text-align: center; justify-content: justify; align-items: center; font-size: 1.25rem;
-        color: black; }
+        .navbar2-p { width: 99dvw; max-width: 99dvw; display: flex; justify-content: center; z-index: 5; position: fixed; top: 1rem; height: 8dvh; padding: 0 5rem 0 5rem; }
+        .navbar2 { height: 100%; width: 100%; display: flex; align-items: center; justify-content: space-between; background: rgba(65, 105, 225, 0.60); border: 2px solid #4169E1;
+        border-radius: 2rem; }
+        .navbar2 button { display: flex; cursor: pointer; color: white; background: transparent; border-radius: 2rem; border: none; font-weight: bold;
+        font-family: 'Fredoka', sans-serif; font-size: 1.25rem; align-items: center; justify-content: center; padding: 0.5rem 3rem 0.5rem 3rem; height: 90%; }
+        .navbar2 button:hover { background: white; color: #274bb5; opacity: 1; }
+        .navbar2-img { height: 6dvh; opacity: 90%; border-radius: 0; }
+        .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; align-items: center;  height: 100%; }
+        .navbar-center { flex: 1; justify-content: center; display: flex; background: white; height: 90%; border-radius: 3rem; align-items: center;  }
+
+        .section-divider { display: none; }
+
+        .section { max-width: 100dvw; max-height: 100dvh; height: 100dvh; }
+        .section-title { opacity: 70%; font-size: 3rem; color: #4169E1; }
+        .section-desc { opacity: 70%;  font-size: 1rem; color: black; }
+
+        .s1-m { display: flex;  }
+        .carousel { position: relative; overflow: hidden; margin: 0 auto; max-height: 100dvh; height: auto; bottom: 0; max-width: 100dvw; width: 100dvw; }
+        .carousel-panel { position: absolute; z-index: 3; bottom: 1rem; height: 15dvh; width: 100%; display: flex; align-content: center; justify-content: center; }
+        .carousel-text3 { padding: 0 5rem 0 5rem; background: rgba(65, 105, 225, 0.65); color: white; border-radius: 3rem; border: 2px solid #4169E1; width: 70%; display: flex;
+        flex-direction: column; align-content: center; align-items: center; justify-content: space-evenly; text-align: justify; }
+        .carousel-span { text-justify: auto; padding: 0; opacity: 1; color: white; }
+         .carousel-text2 {  position: absolute; top: 0; opacity: 85%; display: none; text-align: center; justify-content: justify; align-items: center; font-size: 1.6rem; color: black; }
+         .carousel-text4 { display: none; }
         .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
         .carousel-track img { height: 100%; width: 100%; object-fit: cover; flex-shrink: 0; }
-
-        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 2rem; padding: 0.5rem 1rem; cursor: pointer; z-index: 2; }
-        .carousel-btn.prev { left: 10px; }
-        .carousel-btn.next { right: 10px; }
-        .carousel-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 3; }
-        .dot { width: 12px; height: 12px; background: white; border-radius: 50%; opacity: 0.5; cursor: pointer; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(65, 105, 225, 0.40); color: white; font-size: 2rem; padding: 0.5rem 1rem;
+        cursor: pointer; z-index: 2; border: 2px solid #4169E1; border-radius: 1rem; }
+        .carousel-btn:hover { background: rgba(65, 105, 225, 100); }
+        .carousel-btn.prev { left: 10px; opacity: 60%;}
+        .carousel-btn.next { right: 10px; opacity: 60%;}
+        .carousel-dots { opacity: 100%; display: flex; gap: 8px;  }
+        .dot { width: 1rem; height: 1rem; background: white; border-radius: 50%; opacity: 0.5; cursor: pointer; border: 2px solid #4169E1; }
+        .dot:hover { background: rgba(65, 105, 225, 100); }
         .dot.active { opacity: 1; }
 
-        .section2 { height: 90%; width: 100%; display: flex; padding: 2rem; }
-        .section2 a { margin-left: 1rem; font-size: 1.75rem; font-family: 'Fredoka', sans-serif; text-decoration: none; color: white; background: blue; padding: 1.5rem; border-radius: 3rem; }
         .section2-m { display: none; }
-        .s3-m { display: none; }
-        .section3 { height: 90vh; width: 100%; display: flex; align-content: center; justify-content: space-between; padding: 2rem; align-items: center; }
-        .section4 { height: 90vh; width: 100%; display: flex; align-content: center; justify-content: space-between; padding: 2rem; align-items: center;  }
+        .section2 { display: flex; }
+        .section2 a { font-size: 1rem; font-family: 'Fredoka', sans-serif; color: blue; background: transparent; padding: 1.5rem; }
+        .section2 img { height: 100dvh; object-fit: cover; flex-shrink: 0; }
 
-        .rev { display: flex; background: white; flex-direction: column; padding: 1rem; text-align: start; width: 600px; height: auto; gap: 0.5rem; border-radius: 2rem; }
-        .rev:hover { border: 2px solid blue; cursor: pointer; }
-        .section2-max-w-600 { display: none; }
+        .s3-m { display: none; }
+        .section3 { display: flex; align-content: center; justify-content: space-between; align-items: center; }
 
         .s4-m { display: none; }
+        .section4 { display: flex; align-content: center; justify-content: space-between; align-items: center; }
+
+        .section5 { background: #f9f9f9; }
+        .rev { display: flex; background: rgba(65, 105, 225, 0.40); color: white; flex-direction: column; padding: 1rem; text-align: start; width: 600px; height: auto; gap: 0.5rem; border-radius:
+        2rem; border: 2px solid #4169E1; }
+        .rev:hover { background: white; color: #4169E1; cursor: pointer; }
+        .section2-max-w-600 { display: none; }
+
+
         .section5-max-w-600 { display: none; }
-        .section5 { height: 90vh; flex-direction: column; padding: 0 5rem 5rem 5rem; max-width: 99dvw; width: 99dvw; }
+        .section5 { height: 90vh; flex-direction: column; padding: 0 5rem 0 5rem; max-width: 99dvw; width: 99dvw; }
 
         .socials { display: flex; gap: 2rem; justify-content: center; font-size: 3rem; }
         .footer { max-width: 99dvw; width: 99dvw; height: 55dvh; max-height: 55dvh; display: flex; flex-direction: column; justify-content: space-between; align-items: center;
         align-content: center; text-align: center;  }
         .footer-logo { height: 40dvh; width: auto; }
         .footer-details { font-size: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+
+
+        
         /* Optional for small screens */
         @media (max-width: 600px) {
 
@@ -101,28 +120,28 @@
           .socials-img { width: 100px; height: 100px; }
           .section5-max-w-600 { display: block;  max-width: 100dvw; width: 100dvw; }
 
-          .navbar { display: none; justify-content: center; min-height: 8dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 8dvh; }
-          .section-divider { height: 8dvh; }
-          .navbar-buttons { }
-          .navbar button { font-size: 10px; background: transparent; color: #4169E1; border: none; }
-          .navbar2 { display: flex; width: 100%; align-items: center; justify-content: space-between; z-index: 5; position: fixed; top: 0; background: white; height: 8dvh; border-bottom: 2px solid
-          red; }
-          .navbar2 button { display: flex; cursor: pointer; color: blue; background: transparent; border: none; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 0.55rem;
-            width: 25%; }
+          .section-divider { display: flex; height: 10dvh; }
+          .navbar2-p { padding: 0; height: 10dvh; top: 0; max-width: 100dvw; width: 100dvw; }
+          .navbar2 { border-radius: 0; }
+          .navbar2 button { font-size: 0.55rem; width: 25%; }
+          .navbar2-img { height: 6dvh; }
 
-          .s1-m { max-height: 92dvh; height: 92dvh; justify-content: space-evenly;}
           .section2 { display: none; }
           .section2-m { display: flex; }
           .section3 { display: none; }
           .section4 { display: none; }
           .footer { height: 100dvh; }
           .section { padding: 0 1rem 0 1rem; }
-
-          .carousel { max-height: 90dvh; height: auto;  }
+            .s1-m { padding: 0 1rem 0 1rem;  }
+          .carousel { padding: 0; height: 70dvh; bottom: 0;}
+          .carousel-panel { height: 3dvh; }
+          .carousel-span { display: none; }
           .carousel-btn { display: none; }
-          .carousel-text2 { font-size: 1.3rem; }
-          .carousel-text3 { font-size: 0.8rem; }
+          .carousel-text2 { display: none; }
+          .carousel-text3 { height: 3dvh; width: 3dvw; }
           .carousel-track img {  }
+          .carousel-dots { opacity: 100%; display: flex; gap: 4px;  }
+          .dot { width: 0.75rem; height: 0.75rem; }
             .footer { width: 100dvw; max-height: 100dvh; height: auto; gap: 3rem; } .socials { font-size: 2rem; }
             .footer-logo { height: 40%; width: 95dvw; }
             .footer-details { font-size: 1rem; }
@@ -136,82 +155,86 @@
       </style>
     </head>
     <body>
-      <nav class="navbar">
-        <div style="display: flex; justify-content: space-between; width: 95%;">
-          <div class="navbar-buttons">
-            <div class="navbar-left"><button onclick="s('s2', 's2m');">FOOD TOURS</button><button onclick="s('s3', 's3m');">EVENTS & PRIVATE TOURS</button></div>
-            <div class="navbar-center"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.PNG" class="s1-m-logo"></div>
-            <div class="navbar-right"><button onclick="s('s4', 's4m');">ABOUT ME</button>
-                <button onclick="s('s5', 's5m');">MY REVIEWS</button></div>
+      <nav class="navbar2-p">
+          <div class="navbar2">
+              <div class="navbar-left"><button onclick="s('s2', 's2m');">FOOD TOURS</button><button onclick="s('s3', 's3m');">EVENTS & PRIVATE TOURS</button></div>
+              <div class="navbar-center" onclick="s('s1');"><img  src="/static/assets/logo_napis_bez_tla2.PNG" class="navbar2-img"></div>
+              <div class="navbar-right"><button onclick="s('s4', 's4m');">ABOUT ME</button><button onclick="s('s5', 's5m');">MY REVIEWS</button></div>
           </div>
-        </div>
-      </nav>
-      <nav class="navbar2">
-          <div class="navbar-left"><button onclick="s('s2', 's2m');">FOOD TOURS</button><button onclick="s('s3', 's3m');">EVENTS & PRIVATE TOURS</button></div>
-          <div class="navbar-center"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.PNG" style="height: 6dvh; opacity: 100%; "></div>
-          <div class="navbar-right"><button onclick="s('s4', 's4m');">ABOUT ME</button><button onclick="s('s5', 's5m');">MY REVIEWS</button></div>
       </nav>
       <section class="section-divider"></section>
-      <section class="section s1-m" >
-    <!--      <div style="padding: 0.5rem 1rem 1rem 1rem;"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.png" class="s1-m-logo"></div>-->
+      <section class="section s1-m" id="s1" tabindex="1" >
 
-          <div id="s1" tabindex="1" class="carousel-text2" style="justify-content: center;">
+          <div class="carousel">
+                <div class="carousel-text2" style="justify-content: center;">
                 <b style="text-wrap: wrap; padding: 0;">
-                  Join BeMyGuest <br> Your Authentic Food Experience in Poland
+                  Join BeMyGuest Your Authentic Food Experience in Poland
                 </b>
               </div>
-          <div class="carousel">
-
+              <div class="carousel-text4">
+                <span style="text-wrap: wrap; padding: 0;">
+                  I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
+                      through the city’s rich culinary traditions, hidden gems, and warm hospitality.
+                      If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the
+                      Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.
+                      We can’t wait to share it with you. <b>Just Be My Guest!</b>
+                </span>
+              </div>
               <div id="c-track" class="carousel-track">
-        <!--        <img src="/static/assets/photo1.jpeg" alt="Slide 1">-->
-        <!--        <img src="/static/assets/inne1.jpeg" alt="Slide 2">-->
-        <!--        <img src="/static/assets/aboutme2.jpeg" alt="Slide 3">-->
-        <!--        <img src="/static/assets/new4.jpeg" alt="Slide 4">-->
-        <!--        <img src="/static/assets/inne2.jpg" alt="Slide 5">-->
+                <img src="/static/assets/aboutme2.jpeg" alt="Slide 1">
+                <img src="/static/assets/photo1.jpeg" alt="Slide 2">
+                <img src="/static/assets/inne1.jpeg" alt="Slide 3">
+                <img src="/static/assets/inne2.jpg" alt="Slide 4">
+                <img src="/static/assets/inne4.jpg" alt="Slide 5">
+                <img src="/static/assets/new4.jpeg" alt="Slide 6">
               </div>
               <button class="carousel-btn prev">&#10094;</button>
               <button class="carousel-btn next">&#10095;</button>
-              <div class="carousel-dots">
-                <span data-index="0" class="dot active"></span>
-                <span data-index="1" class="dot"></span>
-                <span data-index="2" class="dot"></span>
-                <span data-index="3" class="dot"></span>
-                <span data-index="4" class="dot"></span>
-                  <span data-index="5" class="dot"></span>
-              </div>
-
+            <div class="carousel-panel">
+                <div class="carousel-text3">
+                    <span class="carousel-span">
+                      I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
+                      through the city’s rich culinary traditions, hidden gems, and warm hospitality.
+                      If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the
+                      Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.
+                      We can’t wait to share it with you. <b>Just Be My Guest!</b>
+                    </span>
+                    <div class="carousel-dots">
+                    <span data-index="0" class="dot active"></span>
+                    <span data-index="1" class="dot"></span>
+                    <span data-index="2" class="dot"></span>
+                    <span data-index="3" class="dot"></span>
+                    <span data-index="4" class="dot"></span>
+                      <span data-index="5" class="dot"></span>
+                  </div>
+                  </div>
+                </div>
         </div>
-          <div class="carousel-text3">
-                <span style="text-wrap: wrap; padding: 0;">
-                  I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
-                  through the city’s rich culinary traditions, hidden gems, and warm hospitality.
-                  If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the
-                  Podgórze and Kazimierz districts, hosted by my amazing team of passionate local guides.
-                  We can’t wait to share it with you. <b>Just Be My Guest!</b>
-                </span>
-              </div>
+
       </section>
 
       <section id="s2" tabindex="2" class="section section2">
-          <div style="display: flex; align-content: center; align-items: center; "><img src="/static/assets/photo3.jpeg" style="height: 85vh; object-fit: cover; flex-shrink: 0;"></div>
+          <div style="display: flex; align-content: center; align-items: center;">
+              <img src="/static/assets/photo3.jpeg"></div>
+
           <div style="display: flex; flex-direction: column; justify-content: space-evenly; align-content: center; align-items: center; margin: 0 3rem 0 3rem;">
-            <div class="s2-e" style="align-items: start; display: flex; flex-direction: column; gap: 0.5rem;"><a
+            <div style="text-align: start; align-items: start; align-content: start; justify-content: start; display: flex; flex-direction: column; gap: 0.5rem;"><a
                     href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1">
               <strong>Warsaw Traditional Food Tour with Adrian</strong>
             </a><br>
-            <span style="padding: 0 3rem 3rem 3rem;">I’ll personally take you on a journey through the city’s rich culinary traditions, hidden gems, and warm hospitality</span>
+            <span class="section-desc">I’ll personally take you on a journey through the city’s rich culinary traditions, hidden gems, and warm hospitality</span>
             </div>
-            <div ><p style="font-size: 5rem; font-weight: bold; font-family: 'Fredoka', sans-serif; color: black;">FOOD TOURS</p></div>
-            <div class="s2-e" style="align-items: end; display: flex; flex-direction: column;">
-            <span style="padding: 0 3rem 3rem 3rem;">If you're planning a trip to Cracow, don’t miss my delicious food tour through the Podgórze and Kazimierz districts, led by my amazing team of
+            <div ><b class="section-title">FOOD TOURS</b></div>
+            <div style="align-items: end; display: flex; flex-direction: column;">
+            <span class="section-desc">If you're planning a trip to Cracow, don’t miss my delicious food tour through the Podgórze and Kazimierz districts, led by my amazing team of
               passionate local guides.</span><br>
-            <a style="margin-right: 1rem; font-size: 1.75rem; font-family: 'Fredoka', sans-serif;" href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
+            <a href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
               <strong>Krakow: Eat Like a Local - Polish Food Tour</strong></a></div>
           </div>
-          <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo4.jpeg" style="height: 85vh; object-fit: cover; flex-shrink: 0;"></div>
+          <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo4.jpeg"></div>
       </section>
 
-      <section id="s2m" tabindex="6" class="section2-m" style="width: 99dvw; padding: 0 1rem 0 1rem;">
+      <section  class="section2-m" style="width: 99dvw; padding: 0 1rem 0 1rem;">
           <div style="display: flex; flex-direction: column;  justify-content: space-between; align-items: center;">
               <img src="/static/assets/photo3.jpeg" style="height: 60dvh; width: 100%; border-radius: 1rem; ">
               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 1rem; gap: 1rem;"><a
@@ -220,7 +243,7 @@
             </a>
                 <span style="font-size: 0.8rem;">I’ll personally take you on a journey through the city’s rich culinary traditions, hidden gems, and warm hospitality</span>
                 </div>
-              <p style="font-weight: bold; font-size: 2.0rem; padding: 2rem; font-family: 'Fredoka', sans-serif;">FOOD TOURS</p>
+              <p id="s2m" tabindex="6" style="font-weight: bold; font-size: 2.0rem; padding: 2rem; font-family: 'Fredoka', sans-serif;">FOOD TOURS</p>
 
               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 1rem; gap: 1rem;">
                 <span style="font-size: 0.8rem;">If you're planning a trip to Cracow, don’t miss my delicious food tour through the Podgórze and Kazimierz districts, led by my amazing team of
@@ -233,7 +256,7 @@
 
       </section>
 
-      <section id="s3m" tabindex="7"  class="section s3-m" style="height: 100dvh;">
+      <section id="s3m" tabindex="7" class="section s3-m" style="height: 100dvh;">
           <p style=" font-weight: bold; font-size: 1.6rem; font-family: 'Fredoka', sans-serif;">EVENTS & PRIVATE TOURS</p>
           <img src="/static/assets/inne5.jpg" style="height: auto; width: 100%; border-radius: 1rem; ">
           <span style="font-size: 0.8rem;">Corporate Events & Private Food Tours
@@ -246,26 +269,26 @@
       </section>
 
       <section id="s3" tabindex="3" class="section section3">
-        <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/inne5.jpg" style="height: 90%;"></div>
+        <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/inne5.jpg" style="height: 100%;"></div>
           <div style="display: flex; flex-direction: column; align-content: center; text-align: center; height: 100%; justify-content: space-evenly; padding: 10rem;">
-              <p style=" font-weight: bold; font-size: 4rem; font-family: 'Fredoka', sans-serif;">EVENTS & PRIVATE TOURS</p>
-                  <p style="align-text: justify; ">
+              <b class="section-title">EVENTS & PRIVATE TOURS</b>
+              <span class="section-desc">
               Want to turn your business trip or group travel into something truly unforgettable?
               Just contact me – I’ll take care of everything to make your group’s experience truly special!
               <a href="mailto:book@bmgpoland.com">book@bmgpoland.com</a>
               +48 888 805 198
-              </p>
+              </span>
           </div>
       </section>
 
       <section id="s4" tabindex="4" class="section section4">
           <div style="display: flex; flex-direction: column; align-content: center; text-align: center; justify-content: space-evenly; padding: 10rem; height: 100%;">
-            <p style="font-size: 4rem; font-weight: bold; font-family: 'Fredoka', sans-serif;">ABOUT ME</p>
-            <p style="align-text: justify; text-wrap: wrap;">I’m a local food tour guide, born and raised in the Polish countryside, where great food and stories were always around me.
+            <b class="section-title">ABOUT ME</b>
+            <span class="section-desc">I’m a local food tour guide, born and raised in the Polish countryside, where great food and stories were always around me.
                 With years of experience in hospitality, a degree from the Agricultural University, and even a stint as a folk dancer,
                 I’m all about sharing the real taste and culture of Poland.
                 Let’s explore it together - I’m waiting for you!
-                    Just BeMyGuest</p>
+                    Just BeMyGuest</span>
           </div>
                   <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/photo2.jpeg" style="height: 90%;"></div>
       </section>
@@ -295,7 +318,7 @@
               <div>Adrian showed us a very nice set of traditional meals. We also appreciated his knowledge of how those meals came to be.
              He taught us so much about traditional cuisine. He was also just nice to talk to. A very friendly guy with a kind heart.</div>
             </div>
-            <p style="color: black; font-size: 5rem; font-weight: bold; font-family: 'Fredoka', sans-serif;">MY REVIEWS</p>
+            <b class="section-title">MY REVIEWS</b>
             <div class="rev" style="width: 500px;">
               <div style="color: blue;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -377,111 +400,97 @@
       </section>
 
       <script>
-            f1();
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(track.children);
-        const prevBtn = document.querySelector('.carousel-btn.prev');
-        const nextBtn = document.querySelector('.carousel-btn.next');
-        const dots = document.querySelectorAll('.dot');
 
-        let currentIndex = 0;
+function s(id, id2) {
+    let d1 = document.getElementById(id); let d2 = document.getElementById(id2);
+    if (d1 && isVisible(d1)) { d1.focus(); } else if (d2 && isVisible(d2)) { d2.focus(); }}
 
-        function f1() {
-          // funkcja uzupełnia panel zdjęciami
+function isVisible(el) { return el.offsetParent !== null || window.getComputedStyle(el).display !== 'none'; }
+function revs() {
+  let revs1 = [
+    ['Super fun, insightful, and tasty tour!', `I did this tour my first night in Warsaw and it was the best way to start my trip.
+     Tried so many yummy authentic polish foods. Adrian was the best guide. He’s so knowledgeable, friendly, and helpful. He also sent me great recommendations
+      for restaurants and things to do, and a list of every place we went to and the food we tried. I highly highly recommend doing this tour!`],
+    ['Delicious Polish Food and So Much More!', `We had a wonderful time with Adrian on our tour! The places he took us on the food tour were wonderful
+     and very authentic Polish food. You definitely want to come hungry as there is plenty of food! We were lucky to have a private tour on a rainy Sunday night
+      and Adrian gave us such a great introduction to Warsaw and told us interesting facts about the city. His warm personality made the night go very fast!
+       I highly recommend this tour in Warsaw and one of the best guides we've experienced!`]];
 
-          const p = ['aboutme2.jpeg', 'photo1.jpeg', 'inne1.jpeg', 'inne2.jpg', 'inne4.jpg', 'new4.jpeg'];
-          let debug = true;
-          const c = document.getElementById('c-track');
-          if (debug) { p.forEach((e, counter) => { let img = document.createElement('img'); img.alt = 'Slide ' + counter;
-            img.src = '/static/assets/' + e; c.appendChild(img); }); }
-          else { }
+  let revs3 = [['The Perfect Traditional Tour', `We had a wonderful time with Adrian on our tour! The places he took us on the food tour were wonderful
+   and very authentic Polish food. You definitely want to come hungry as there is plenty of food! We were lucky to have a private tour on a rainy Sunday
+    night and Adrian gave us such a great introduction to Warsaw and told us interesting facts about the city. His warm personality made the night go very
+     fast! I highly recommend this tour in Warsaw and one of the best guides we've experienced!`],
+    ['Adrian is the Best!', `Wow. What an awesome food tour we had with Adrian.. He is so personable and his knowledge about Polish cuisine can't be beat.
+    We had the best time with Adrian and cannot recommend him enough!`]];
 
-
-        }
-
-        function s(id, id2) {
-            let d1 = document.getElementById(id); let d2 = document.getElementById(id2);
-            if (d1 && isVisible(d1)) {
-                d1.focus();
-            } else if (d2 && isVisible(d2)) {
-                d2.focus();
-            }
-        }
-        function isVisible(el) {
-    return el.offsetParent !== null || window.getComputedStyle(el).display !== 'none';
+  revs1.forEach(e => {
+    let item = document.createElement('div'); item.className = 'rev';
+    item.innerHTML = `
+      <div style="color: blue;">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      </div>
+      <div><strong>${e[0]}</strong></div>
+      <div></div>
+      <div>${e[1]}</div>
+    `;
+    document.getElementById('revs1').appendChild(item);
+  });
+  revs3.forEach(e => {
+    let item = document.createElement('div'); item.className = 'rev';
+    item.innerHTML = `
+      <div style="color: blue;">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      </div>
+      <div><strong>${e[0]}</strong></div>
+      <div></div>
+      <div>${e[1]}</div>
+    `;
+    document.getElementById('revs3').appendChild(item);
+  });
 }
-        function revs() {
-          let revs1 = [
-            ['Super fun, insightful, and tasty tour!', `I did this tour my first night in Warsaw and it was the best way to start my trip.
-             Tried so many yummy authentic polish foods. Adrian was the best guide. He’s so knowledgeable, friendly, and helpful. He also sent me great recommendations
-              for restaurants and things to do, and a list of every place we went to and the food we tried. I highly highly recommend doing this tour!`],
-            ['Delicious Polish Food and So Much More!', `We had a wonderful time with Adrian on our tour! The places he took us on the food tour were wonderful
-             and very authentic Polish food. You definitely want to come hungry as there is plenty of food! We were lucky to have a private tour on a rainy Sunday night
-              and Adrian gave us such a great introduction to Warsaw and told us interesting facts about the city. His warm personality made the night go very fast!
-               I highly recommend this tour in Warsaw and one of the best guides we've experienced!`]];
+const track = document.getElementById('c-track');
+const slides = track.querySelectorAll('img');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
 
-          let revs3 = [['The Perfect Traditional Tour', `We had a wonderful time with Adrian on our tour! The places he took us on the food tour were wonderful
-           and very authentic Polish food. You definitely want to come hungry as there is plenty of food! We were lucky to have a private tour on a rainy Sunday
-            night and Adrian gave us such a great introduction to Warsaw and told us interesting facts about the city. His warm personality made the night go very
-             fast! I highly recommend this tour in Warsaw and one of the best guides we've experienced!`],
-            ['Adrian is the Best!', `Wow. What an awesome food tour we had with Adrian.. He is so personable and his knowledge about Polish cuisine can't be beat.
-            We had the best time with Adrian and cannot recommend him enough!`]];
+function goToSlide(index) {
+const slideWidth = slides[0].clientWidth;
+track.style.transform = `translateX(-${slideWidth * index}px)`;
 
-          revs1.forEach(e => {
-            let item = document.createElement('div'); item.className = 'rev';
-            item.innerHTML = `
-              <div style="color: blue;">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <div><strong>${e[0]}</strong></div>
-              <div></div>
-              <div>${e[1]}</div>
-            `;
-            document.getElementById('revs1').appendChild(item);
-          });
-          revs3.forEach(e => {
-            let item = document.createElement('div'); item.className = 'rev';
-            item.innerHTML = `
-              <div style="color: blue;">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <div><strong>${e[0]}</strong></div>
-              <div></div>
-              <div>${e[1]}</div>
-            `;
-            document.getElementById('revs3').appendChild(item);
-          });
-        }
-        function updateCarousel() {
-            const slideWidth = slides[0].getBoundingClientRect().width;
-            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+// Ustawienie aktywnej kropki
+dots.forEach(dot => dot.classList.remove('active'));
+if (dots[index]) dots[index].classList.add('active');
 
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[currentIndex].classList.add('active');
-        }
+currentIndex = index;
+}
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateCarousel();
-        });
+function nextSlide() {
+const nextIndex = (currentIndex + 1) % slides.length;
+goToSlide(nextIndex);
+}
+revs();
+// Automatyczne przełączanie co sekundę
+setInterval(nextSlide, 2000);
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateCarousel();
-        });
+// (Opcjonalnie) Obsługa kliknięcia kropek
+dots.forEach(dot => {
+dot.addEventListener('click', () => {
+const index = parseInt(dot.getAttribute('data-index'));
+goToSlide(index);
+});
+});
+          const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
 
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-              currentIndex = parseInt(dot.dataset.index);
-              updateCarousel();
-            });
-        });
+// Funkcja do cofania slajdu
+function prevSlide() {
+  const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+  goToSlide(prevIndex);
+}
 
-        window.addEventListener('resize', updateCarousel);
-        updateCarousel();
-        revs();
-
-
+// Obsługa kliknięć przycisków
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
       </script>
 
     </body>

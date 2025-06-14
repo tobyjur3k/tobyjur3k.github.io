@@ -45,20 +45,23 @@
         @media (max-width: 768px) {
 
         }
-        .navbar { display: flex; justify-content: center; min-height: 10dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 10dvh; border-bottom: 2px solid black; }
+        .navbar { display: none; justify-content: center; min-height: 10dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 10dvh; border-bottom: 2px solid black; }
         .navbar-buttons { display: flex; width: 100%; align-items: center; justify-content: space-between; }
         .navbar button { cursor: pointer; background: blue; color: white; border: none; border-radius: 3rem; padding: 10px; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1.5rem;  }
         .navbar button:hover { border: 2px solid blue; background: transparent; color: blue; }
         .navbar-left, .navbar-right { flex: 3; display: flex; justify-content: space-evenly; }
         .navbar-center { flex: 1; justify-content: center; display: flex; }
-        .s1-m { height: 90dvh; }
+        .section { max-width: 99dvw; width: 99dvw; max-height: 100dvh; height: 100dvh; padding: 0 8rem 0 8rem; }
+        .s1-m { display: flex; flex-direction: column; font-size: 1.3rem; justify-content: space-evenly;  }
         .s1-m-text { display: none; }
         .s1-m-title { display: none; }
         .s1-m-logo { height: 70px; cursor: pointer; }
         .section-divider { height: 10dvh; }
-        .carousel { position: relative; overflow: hidden; height: 70dvh; margin: 0 auto; max-height: 100dvh; bottom: 0; width: 95dvw; }
-        .carousel-text2 { height: 10dvh; z-index: 4; width: 100%; opacity: 60%; display: flex; text-align: center; justify-content: justify; align-items: center;
-               color: black; font-size: 1.25rem;}
+        .carousel { position: relative; overflow: hidden; margin: 0 auto; max-height: 80dvh; height: auto; bottom: 0; max-width: 100%; width: auto; border-radius: 1rem; }
+        .carousel-text2 {  opacity: 70%; display: flex; text-align: center; justify-content: justify; align-items: center; font-size: 2rem;
+           color: black; }
+        .carousel-text3 {   opacity: 70%; display: flex; text-align: center; justify-content: justify; align-items: center; font-size: 1.25rem;
+        color: black; }
         .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
         .carousel-track img { height: 100%; width: 100%; object-fit: cover; flex-shrink: 0; }
 
@@ -98,26 +101,23 @@
           .socials-img { width: 100px; height: 100px; }
           .section5-max-w-600 { display: block; max-height: 100dvh; height: 100dvh; max-width: 100dvw; width: 100dvw; }
 
-          .navbar { display: flex; justify-content: center; min-height: 8dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 8dvh; }
+          .navbar { display: none; justify-content: center; min-height: 8dvh; z-index: 5; position: fixed; top: 0; background: white; width: 100%; height: 8dvh; }
           .section-divider { height: 5dvh; }
           .navbar-buttons { }
           .navbar button { font-size: 10px; background: transparent; color: #4169E1; border: none; }
 
-          .section { max-height: 100dvh; height: 100dvh; }
           .section2 { display: none; }
           .section2-m { display: flex; }
           .section3 { display: none; }
           .section4 { display: none; }
           .footer { height: 95dvh; width: 100dvw; }
-          .s1-m { background: white; justify-content: space-evenly; display: flex; height: 95dvh; flex-direction: column; }
-          .s1-m-text { display: block; color: #4169E1; padding: 0 1rem 1rem 1rem; font-family: 'Fredoka', sans-serif; font-weight: bold; text-align: justify; }
-          .s1-m-title { display: flex; flex-direction: column; justify-content: center; text-align: center; width: 100%; }
-          .s1-m-logo {  height: 30px;  }
-          .carousel { max-height: 100dvh; height: auto; width: 90dvw;}
-          .carousel-btn { font-size: 1.5rem; }
-          .carousel-text { display: none; }
-          .carousel-text2 { font-size: 10px; }
-          .carousel-track img { max-height: 50dvh; height: 50dvh; }
+          .section { padding: 0 1rem 0 1rem; }
+
+          .carousel { max-height: 90dvh; height: 75dvh; }
+          .carousel-btn { display: none; }
+          .carousel-text2 { font-size: 1.1rem;   }
+          .carousel-text3 { font-size: 0.8rem;   }
+          .carousel-track img {  }
             .footer { width: 100dvw; } .socials { font-size: 3rem; }
             .footer-logo { height: 40%; width: 95dvw; }
             .footer-details { font-size: 1rem; }
@@ -140,16 +140,13 @@
           </div>
         </div>
       </nav>
-      <section class="section-divider"></section>
-      <section id="s1" tabindex="1" class="s1-m" >
+<!--      <section class="section-divider"></section>-->
+      <section id="s1" tabindex="1" class="section s1-m" >
     <!--      <div style="padding: 0.5rem 1rem 1rem 1rem;"><img onclick="s('s1');" src="/static/assets/logo_napis_bez_tla2.png" class="s1-m-logo"></div>-->
-        <div class="s1-m-title" style="color: black; font-weight: bold; font-family: 'Fredoka', sans-serif; font-size: 1rem;">
-              <p>join <b>BeMyGuest</b></p>
-              <p>Your Authentic Food Experience in Poland</p>
-          </div>
-            <div class="carousel-text2" style="justify-content: center;">
-                <b style="text-wrap: wrap; padding: 3rem;">
-                  Join BeMyGuest - Your Authentic Food Experience in Poland
+
+          <div class="carousel-text2" style="justify-content: center;">
+                <b style="text-wrap: wrap; padding: 0;">
+                  Join BeMyGuest <br> Your Authentic Food Experience in Poland
                 </b>
               </div>
           <div class="carousel">
@@ -173,8 +170,8 @@
               </div>
 
         </div>
-          <div class="carousel-text2">
-                <span style="text-wrap: wrap; padding: 3rem;">
+          <div class="carousel-text3">
+                <span style="text-wrap: wrap; padding: 0;">
                   I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
                   through the city’s rich culinary traditions, hidden gems, and warm hospitality.
                   If you’re planning a trip to Cracow too, don’t miss my delicious food tour through the
@@ -203,24 +200,24 @@
           <div style="display: flex; align-content: center; align-items: center;"><img src="/static/assets/photo4.jpeg" style="height: 85vh; object-fit: cover; flex-shrink: 0;"></div>
       </section>
 
-      <section id="s2m" tabindex="6" class="section2-m" style="width: 100dvw;">
-          <div style="padding: 1rem; display: flex; flex-direction: column;  justify-content: space-between; align-items: center;">
-              <img src="/static/assets/photo3.jpeg" style="width: 100%; height: 100%;">
+      <section id="s2m" tabindex="6" class="section2-m" style="width: 99dvw; padding: 0 1rem 0 1rem;">
+          <div style="display: flex; flex-direction: column;  justify-content: space-between; align-items: center;">
+              <img src="/static/assets/photo3.jpeg" style="height: 60dvh; width: 100%; border-radius: 1rem; ">
               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 1rem; gap: 1rem;"><a
                     href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1">
               <strong>Warsaw Traditional Food Tour with Adrian</strong>
             </a>
-                <span >I’ll personally take you on a journey through the city’s rich culinary traditions, hidden gems, and warm hospitality</span>
+                <span style="font-size: 0.8rem;">I’ll personally take you on a journey through the city’s rich culinary traditions, hidden gems, and warm hospitality</span>
                 </div>
-              <p style="font-weight: bold; font-size: 2.0rem; padding: 3rem; font-family: 'Fredoka', sans-serif;">FOOD TOURS</p>
+              <p style="font-weight: bold; font-size: 2.0rem; padding: 2rem; font-family: 'Fredoka', sans-serif;">FOOD TOURS</p>
 
               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 1rem; gap: 1rem;">
-                <span >If you're planning a trip to Cracow, don’t miss my delicious food tour through the Podgórze and Kazimierz districts, led by my amazing team of
+                <span style="font-size: 0.8rem;">If you're planning a trip to Cracow, don’t miss my delicious food tour through the Podgórze and Kazimierz districts, led by my amazing team of
               passionate local guides.</span>
                   <a href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
               <strong>Krakow: Eat Like a Local - Polish Food Tour</strong></a>
             </div>
-              <img src="/static/assets/photo4.jpeg" style="width: 100%; height: 100%;">
+              <img src="/static/assets/photo4.jpeg"  style="height: 60dvh; width: 100%; border-radius: 1rem; ">
           </div>
 
       </section>

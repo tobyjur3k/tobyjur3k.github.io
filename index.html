@@ -3,6 +3,7 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="OPIS">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +73,7 @@
         .carousel-span { text-justify: auto; padding: 0; opacity: 1; color: white; }
          .carousel-text2 {  position: absolute; top: 0; opacity: 85%; display: none; text-align: center; justify-content: justify; align-items: center; font-size: 1.6rem; color: black; }
          .carousel-text4 { display: none; }
-        .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; background: 1px solid black; }
+        .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 2s ease; }
         .carousel-track img { height: 100%; width: 100%; object-fit: cover; flex-shrink: 0; }
         .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(65, 105, 225, 0.20); color: white; font-size: 2rem; padding: 0.5rem 1rem;
         cursor: pointer; z-index: 2; border: 2px solid #4169E1; border-radius: 1rem; }
@@ -176,7 +177,7 @@
           <div class="navbar2">
               <div class="navbar-left"><button class="navbar-vip" onclick="s('s2', 's2m');"><span>FOOD</span> <span>TOURS</span></button><button onclick="s('s3', 's3m');" class="navbar-vip">
                   <span>EVENTS &</span> <span>PRIVATE TOURS</span></button></div>
-              <div class="navbar-center" onclick="s('s1');"><img  src="/static/assets/logo_napis_bez_tla2.PNG" class="navbar2-img"></div>
+              <div class="navbar-center" onclick="s('s1');"><img alt="logo be my guest" src="/static/assets/logo_napis_bez_tla2.PNG" class="navbar2-img"></div>
               <div class="navbar-right"><button class="navbar-vip" onclick="s('s4', 's4m');"><span>ABOUT</span> <span>ME</span></button>
                   <button class="navbar-vip" onclick="s('s5', 's5m');"><span>MY</span><span>REVIEWS</span></button></div>
           </div>
@@ -207,6 +208,7 @@
               <button class="carousel-btn next">&#10095;</button>
             <div class="carousel-panel">
                 <div class="carousel-text3">
+                    <b style="font-size: 1.5rem;">Join BeMyGuest Your Authentic Food Experience in Poland</b>
                     <span class="carousel-span">
                       I’m Adrian - your local guide based right here in Warsaw. I’ll personally take you on a journey
                       through the city’s rich culinary traditions, hidden gems, and warm hospitality.
@@ -237,7 +239,7 @@
       </section>
       <section id="s2" tabindex="2" class="section section2">
           <div style="display: flex; align-content: center; align-items: center;">
-              <img src="/static/assets/photo3.jpeg"></div>
+              <img src="/static/assets/photo3.jpeg" alt="Warszawa Food Tour"></div>
 
           <div style="display: flex; flex-direction: column; justify-content: space-evenly;">
               <div style="display: flex; flex-direction: column; align-items: start; gap: 0.8rem;">
@@ -264,7 +266,7 @@
 
       <section class="section2-m" style="width: 99dvw; padding: 0 1rem 0 1rem;">
           <div style="display: flex; flex-direction: column;  justify-content: space-between; align-items: center;">
-              <img src="/static/assets/photo3.jpeg" style="height: 60dvh; width: 100%; border-radius: 1rem; ">
+              <img alt="Warszawa Food Tour" src="/static/assets/photo3.jpeg" style="height: 60dvh; width: 100%; border-radius: 1rem; ">
               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 1rem; gap: 1rem;"><a
                     href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1">
               <strong>Warsaw Traditional Food Tour with Adrian</strong>
@@ -279,14 +281,14 @@
                   <a href="https://www.viator.com/tours/Krakow/Eat-Like-a-Local-Podgorze-and-Kazimierz-Food-Tour/d529-5559386P1">
               <strong>Krakow: Eat Like a Local - Polish Food Tour</strong></a>
             </div>
-              <img src="/static/assets/photo4.jpeg"  style="height: auto; width: 100%; border-radius: 1rem; ">
+              <img alt="Kraków Food Tour" src="/static/assets/photo4.jpeg"  style="height: auto; width: 100%; border-radius: 1rem; ">
           </div>
 
       </section>
 
       <section id="s3m" tabindex="7" class="section s3-m" style="height: 100dvh;">
           <b class="section-title">EVENTS & PRIVATE TOURS</b>
-          <img src="/static/assets/inne5.jpg" style="height: auto; width: 100%; border-radius: 1rem; ">
+          <img src="/static/assets/inne5.jpg" alt="EVENTS & PRIVATE TOURS" style="height: auto; width: 100%; border-radius: 1rem; ">
           <span style="font-size: 0.8rem;">Corporate Events & Private Food Tours
           Want to turn your business trip or group travel into something truly unforgettable?
           Just contact me – I’ll take care of everything to make your group’s experience truly special!
@@ -297,7 +299,7 @@
       </section>
 
       <section id="s3" tabindex="3" class="section section3">
-        <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/inne5.jpg" style="height: 100%;"></div>
+        <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/inne5.jpg" alt="EVENTS & PRIVATE TOURS" style="height: 100%;"></div>
           <div style="display: flex; flex-direction: column; align-content: center; text-align: center; height: 100%; justify-content: space-evenly; padding: 10rem;">
               <b class="section-title">EVENTS & PRIVATE TOURS</b>
               <span class="section-desc">
@@ -318,7 +320,7 @@
                 Let’s explore it together - I’m waiting for you!
                     Just BeMyGuest</span>
           </div>
-                  <div style="height: 100%; display: flex; align-items: center;"><img src="/static/assets/photo2.jpeg" style="height: 90%;"></div>
+                  <div style="height: 100%; display: flex; align-items: center;"><img alt="bemyguest owner" src="/static/assets/photo2.jpeg" style="height: 90%;"></div>
       </section>
 
       <section id="s4m" tabindex="8" class="section s4-m">
@@ -329,7 +331,7 @@
             Agricultural University, and even a stint as a folk dancer, I’m all about sharing the real taste
             and culture of Poland.<br>
             I’m waiting for you – <b>Just BeMyGuest</b>!</span>
-          <img src="/static/assets/photo2.jpeg" style="height: auto; width: 100%; border-radius: 1rem; ">
+          <img alt="bemyguest owner" src="/static/assets/photo2.jpeg" style="height: auto; width: 100%; border-radius: 1rem; ">
 
 
       </section>
@@ -418,10 +420,10 @@
                 <div class="socials2" >
                     <a href="https://www.tripadvisor.com/Attraction_Review-g274856-d30826435-Reviews-Be_My_Guest_by_Adrian-Warsaw_Mazovia_Province_Central_Poland.html"
                      title="https://www.tripadvisor.com/Attraction_Review-g274856-d30826435-Reviews-Be_My_Guest_by_Adrian-Warsaw_Mazovia_Province_Central_Poland.html"
-                       target="_blank"><img src="/static/assets/trip2.PNG" class="socials2-a1" ></a>
+                       target="_blank"><img src="/static/assets/trip2.PNG" alt="tripadvisor logo" class="socials2-a1" ></a>
               <a href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1"
                  title="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1"
-                 target="_blank"><img src="/static/assets/viator.png" class="socials2-a2"></a>
+                 target="_blank"><img src="/static/assets/viator.png" alt="viator logo" class="socials2-a2"></a>
                 </div>
                 <div class="socials">
                     <div style="display: flex; flex-direction: column;"><a href="https://www.tiktok.com/@bemyguest_byadrian" title="https://www.tiktok.com/@bemyguest_byadrian" target="_blank" >

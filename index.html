@@ -106,6 +106,8 @@
 
         .socials { display: flex; justify-content: space-evenly; font-size: 4rem; }
         .socials2 { display: flex; justify-content: space-evenly; }
+        .socials2-a1 { height: 5rem; border-radius: 0; }
+        .socials2-a2 { height: 4rem; border-radius: 0; }
         .socials i { color: black; opacity: 60%; }
 
         .socials span { font-size: 1rem; color: black; opacity: 60%; }
@@ -113,8 +115,8 @@
         align-content: center; text-align: center;  }
         .footer-logo { height: 40dvh; width: auto; }
         .footer-details { font-size: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem; }
-
-
+        .footer-2 { display: flex; flex-direction: column; width: 40%; gap: 1rem; padding: 2rem; }
+        .find-me { margin-bottom: 2rem; }
 
         /* Optional for small screens */
         @media (max-width: 600px) {
@@ -153,11 +155,15 @@
           .carousel-track img {  }
           .carousel-dots { opacity: 100%; display: flex; gap: 4px;  }
           .dot { width: 0.75rem; height: 0.75rem; }
-            .footer { width: 100dvw; max-height: 100dvh; height: auto; gap: 3rem; } .socials { font-size: 2rem; }
+            .footer { width: 100dvw; width: 100dvw; max-height: 100dvh; height: 45dvh;  } .socials { font-size: 2rem; }
+            .footer-2 { width: 100%; }
             .footer-logo { height: 40%; width: 95dvw; }
             .footer-details { font-size: 1rem; }
             .rev { font-size: 0.8rem; border: 1px solid blue; }
-            .rev:hover { border: none; }
+            .rev:hover { background: rgba(65, 105, 225, 0.40); color: white; }
+            .socials2-a1 { height: 2.5rem; }
+            .socials2-a2 { height: 2rem; }
+            .find-me { margin-bottom: 1rem; }
         @media (min-width: 601px)
           { .navbar button:hover { border: 3px solid lightgrey; color: lightgrey; }}
         @media (max-width: 1024px) {
@@ -407,15 +413,15 @@
       </section>
 
       <section id="footer" class="section footer">
-          <div style="display: flex; flex-direction: column; width: 40%; gap: 1rem;  padding: 2rem;">
-              <b class="section-title" style="margin-bottom: 2rem;">FIND ME</b>
+          <div class="footer-2">
+              <b class="section-title find-me" >FIND ME</b>
                 <div class="socials2" >
                     <a href="https://www.tripadvisor.com/Attraction_Review-g274856-d30826435-Reviews-Be_My_Guest_by_Adrian-Warsaw_Mazovia_Province_Central_Poland.html"
                      title="https://www.tripadvisor.com/Attraction_Review-g274856-d30826435-Reviews-Be_My_Guest_by_Adrian-Warsaw_Mazovia_Province_Central_Poland.html"
-                       target="_blank"><img src="/static/assets/trip2.PNG" style="height: 5rem; border-radius: 0;"></a>
+                       target="_blank"><img src="/static/assets/trip2.PNG" class="socials2-a1" ></a>
               <a href="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1"
                  title="https://www.viator.com/tours/Warsaw/Warsaw-Traditional-Food-Tour-with-BeMyGuest-by-Adrian/d528-5533950P1"
-                 target="_blank"><img src="/static/assets/viator.png" style="height: 4rem; border-radius: 0;"></a>
+                 target="_blank"><img src="/static/assets/viator.png" class="socials2-a2"></a>
                 </div>
                 <div class="socials">
                     <div style="display: flex; flex-direction: column;"><a href="https://www.tiktok.com/@bemyguest_byadrian" title="https://www.tiktok.com/@bemyguest_byadrian" target="_blank" >
@@ -527,6 +533,10 @@ function prevSlide() {
 // Obsługa kliknięć przycisków
 prevBtn.addEventListener('click', prevSlide);
 nextBtn.addEventListener('click', nextSlide);
+
+function updateRevs() { let revs = document.querySelectorAll('.rev'); revs.forEach(e => { e.onclick = () => {
+    window.open('https://www.tripadvisor.com/AttractionProductReview-g274772-d32985022-Krakow_Eat_Like_a_Local_with_BeMyGuest-Krakow_Lesser_Poland_Province_Southern_Pola.html');}});}
+updateRevs();
       </script>
 
     </body>
